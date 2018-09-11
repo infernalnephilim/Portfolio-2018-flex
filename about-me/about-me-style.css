@@ -1,0 +1,25 @@
+.about-me {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; }
+  .about-me__picture {
+    flex: 1;
+    border: 4px solid #c31432;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    max-width: 100%; }
+    .about-me__picture img {
+      max-width: 100%;
+      -webkit-transform: translate(30px, 30px);
+      -moz-transform: translate(30px, 30px);
+      -ms-transform: translate(30px, 30px);
+      -o-transform: translate(30px, 30px);
+      transform: translate(30px, 30px); }
+  .about-me__text {
+    flex: 1;
+    text-align: justify;
+    padding: 20px 80px; }
+    .about-me__text__description {
+      font-size: 1.2em; }
+
+/*# sourceMappingURL=about-me-style.css.map */
