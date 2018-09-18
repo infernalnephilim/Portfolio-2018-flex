@@ -1,66 +1,61 @@
 <script type="text/javascript" src="validation.js"></script>
-<div class="container padding-top-50 main-text-font">
-    <div class="row text-left vertical-align padding-top-50">
-        <div class="col-md-4 p">
-            <p><span class="oi oi-map-marker" title="icon name" aria-hidden="true"></span> Kraków, Polska</p>
-            <p><span class="oi oi-phone" title="icon name" aria-hidden="true"></span> +48 694 962 442</p>
-            <p><span class="oi oi-pencil" title="icon name" aria-hidden="true"></span> aleksandra.poltorak.x@gmail.com
+<div class="contact-section__content">
+        <div class="contact-section__content__details">
+            <h2 class="">Dane kontaktowe</h2>
+            <p><i class="fas fa-map-marker-alt"></i> Kraków, Polska</p>
+            <p><i class="fas fa-mobile-alt"></i> +48 694 962 442</p>
+            <p><i class="far fa-envelope"></i> aleksandra.poltorak.x@gmail.com
             </p>
-            <p><span class="oi oi-link-intact" title="icon name" aria-hidden="true"></span> aleksandra-poltorak.pl</p>
-            <a href="https://github.com/infernalnephilim" class="text-white">
-                <p>
-                    <svg class="git-logo" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                              fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
-                              stroke-width="2"/>
-                    </svg>
-                    github.com/infernalnephilim
-                </p>
-            </a>
-        </div>
-        <div class="col-md-8">
-            <form id="kontakt-form" class="needs-validation no-background">
-                <div class="form-row">
-                    <div class="col-md-6 mb-3 margin-top-20">
 
+        </div>
+        <div class="contact-section__content__form">
+            <h2 class="">Wyślij wiadomość</h2>
+            <form id="contact-form" class="needs-validation">
+                <div class="form-row">
+                    <div class="form-row__name">
                         <input type="text" class="form-control" id="contact-name" placeholder="" required>
+                        <span class="focus-border"></span>
+
                         <label for="contact-name" class="input_label">
                             <span class="input_label_content"> Imię i nazwisko</span>
                         </label>
-                        <div id="name-valid" class="invalid-tooltip">
-                            Wpisz poprawne imię i nazwisko
-                        </div>
+                        <!--<div id="name-valid" class="invalid-tooltip">-->
+                            <!--Wpisz poprawne imię i nazwisko-->
+                        <!--</div>-->
                     </div>
-                    <div class="col-md-6 mb-3 margin-top-20">
+                    <div class="form-row__email">
 
                         <input type="text" class="form-control" id="contact-mail" placeholder=""
                                aria-describedby="validationTooltipUsernamePrepend" required>
+                        <span class="focus-border"></span>
+
                         <label for="contact-mail" class="input_label">
-                            <span class="input_label_content">Twój E-Mail</span>
+                            <span class="input_label__content">Twój E-Mail</span>
                         </label>
-                        <div id="topic-valid" class="invalid-tooltip">
-                            Podany adres E-Mail jest niepoprawny
-                        </div>
+                        <!--<div id="topic-valid" class="invalid-tooltip">-->
+                            <!--Podany adres E-Mail jest niepoprawny-->
+                        <!--</div>-->
 
                     </div>
                 </div>
-                <div class="form-row margin-top-20">
-                    <div class="col-md-12 mb-3">
+                <div class="form-row">
+                    <div class="form-row__message">
                         <textarea class="form-control" id="contact-text" rows="4" required></textarea>
+                        <span class="focus-border"></span>
+
                         <label for="contact-text" class="input_label">
                             <span class="input_label_content">Twoja wiadomość</span>
                         </label>
-                        <div id="text-valid" class="invalid-tooltip">
-                            Wpisz treść wiadomości
-                        </div>
+                        <!--<div id="text-valid" class="invalid-tooltip">-->
+                            <!--Wpisz treść wiadomości-->
+                        <!--</div>-->
                     </div>
                 </div>
-                <div class="text-right">
-                    <button id="submit" class="btn btn-primary" type="button">Wyślij wiadomość</button>
+                <div class="form-submit">
+                    <button id="submit" type="button">Wyślij wiadomość</button>
                 </div>
             </form>
-            <div id="message-sent" class="message-success alert-success">Message</div>
-            <div id="message-sent-failed" class="message-fail alert-danger">Message</div>
+            <!--<div id="message-sent" class="message-success alert-success">Message</div>-->
+            <!--<div id="message-sent-failed" class="message-fail alert-danger">Message</div>-->
         </div>
-    </div>
 </div>

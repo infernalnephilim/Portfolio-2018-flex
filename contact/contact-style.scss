@@ -1,0 +1,156 @@
+$media-desktop: "screen and (min-width : 1000px)";
+$decoration-color: #c31432;
+$input-border-color: #F1C40F;
+$grey: #F6F6F6;
+
+@mixin form-inputs-style {
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+  background: #101010;
+  color: white;
+  border: none;
+}
+
+@mixin form-input-focus {
+  outline: none;
+  ~ .focus-border {
+    width: 100%;
+    transition: 0.4s;
+  }
+  ~ .input_label {
+    font-size: 0.7em;
+    top: 5px;
+    left: 5px;
+    color: #797979;
+  }
+}
+@mixin form-input-valid {
+  outline: none;
+  ~ .input_label {
+    font-size: 0.7em;
+    top: 5px;
+    left: 5px;
+    color: #797979;
+  }
+}
+
+@mixin transition-ease($time) {
+  -webkit-transition: all ease $time;
+  -moz-transition: all ease $time;
+  -ms-transition: all ease $time;
+  -o-transition: all ease $time;
+  transition: all ease $time;
+}
+
+.contact-section {
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media #{$media-desktop} {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    &__details {
+      width: 100%;
+      i {
+        margin-right: 5px;
+      }
+
+      @media #{$media-desktop} {
+        margin-right: 10px;
+        flex: 1;
+        h2{
+          text-align: left;
+        }
+      }
+
+    }
+    &__form {
+      width: 100%;
+
+      @media #{$media-desktop} {
+        flex: 2;
+        h2{
+          text-align: center;
+        }
+      }
+
+      input {
+        @include form-inputs-style;
+        &:focus {
+          @include form-input-focus;
+        }
+        &:valid {
+          @include form-input-valid;
+        }
+      }
+      textarea {
+        @include form-inputs-style;
+        resize: vertical;
+        min-height: 200px;
+        &:focus {
+          @include form-input-focus;
+        }
+        &:valid {
+          @include form-input-valid;
+        }
+      }
+      .form-submit{
+        text-align: right;
+      }
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      @media #{$media-desktop} {
+        flex-direction: row;
+      }
+      &__name {
+        position: relative;
+
+        width: 100%;
+        margin-bottom: 20px;
+        @media #{$media-desktop} {
+          margin-right: 5px;
+          margin-bottom: 0px;
+        }
+      }
+      &__email {
+        position: relative;
+
+        width: 100%;
+        @media #{$media-desktop} {
+          margin-left: 5px;
+
+        }
+      }
+      &__message {
+        position: relative;
+
+        width: 100%;
+      }
+      .input_label {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        @include transition-ease(.4s);
+      }
+      .focus-border {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $input-border-color;
+        transition: 0.4s;
+      }
+    }
+  }
+}
