@@ -52,6 +52,14 @@ $media-desktop: "screen and (min-width : 1000px)";
   transform: rotate($deg);
 }
 
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+
 @mixin transition-ease($time) {
   -webkit-transition: all ease $time;
   -moz-transition: all ease $time;
@@ -210,7 +218,12 @@ button {
     }
   }
 }
+.down-bar-change{
 
+}
+.up-bar-change{
+  @include translateAndRotate(10px, 45deg);
+}
 .nav-icon-active-2 {
   @include rotate(-45deg);
 }
@@ -271,10 +284,14 @@ button {
       flex-direction: row;
     }
     .nav-item {
-      padding: 20px;
-      margin: 20px;
-      font-size: 2em;
-
+      padding: 10px;
+      margin: 10px;
+      font-size: 1.5em;
+      @media #{$media-desktop} {
+        padding: 20px;
+        margin: 20px;
+        font-size: 2em;
+      }
       &:after {
         display: block;
         content: '';

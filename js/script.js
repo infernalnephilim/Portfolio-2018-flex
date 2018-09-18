@@ -49,6 +49,7 @@ const app = (() => {
         $(".nav-icon__line").toggleClass("nav-icon-inactive", "nav-icon-active");
         $(".nav-icon__line").addClass("nav-icon-active-2");
         $(".nav-icon__line__left").addClass("nav-icon-active");
+        // $(".nav-icon__line__left").addClass("up-bar-change");
         $(".nav-icon__line__right").addClass("nav-icon-active");
     }));
 

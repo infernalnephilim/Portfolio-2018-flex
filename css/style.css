@@ -111,6 +111,13 @@ button {
       width: 50%;
       margin-left: 50%; }
 
+.up-bar-change {
+  -webkit-transform: translateY(10px) rotate(45deg);
+  -moz-transform: translateY(10px) rotate(45deg);
+  -ms-transform: translateY(10px) rotate(45deg);
+  -o-transform: translateY(10px) rotate(45deg);
+  transform: translateY(10px) rotate(45deg); }
+
 .nav-icon-active-2 {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -173,9 +180,14 @@ button {
       .navbar .navbar-nav {
         flex-direction: row; } }
     .navbar .navbar-nav .nav-item {
-      padding: 20px;
-      margin: 20px;
-      font-size: 2em; }
+      padding: 10px;
+      margin: 10px;
+      font-size: 1.5em; }
+      @media screen and (min-width: 1000px) {
+        .navbar .navbar-nav .nav-item {
+          padding: 20px;
+          margin: 20px;
+          font-size: 2em; } }
       .navbar .navbar-nav .nav-item:after {
         display: block;
         content: '';
