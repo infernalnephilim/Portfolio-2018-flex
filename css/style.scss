@@ -25,7 +25,7 @@ $clip-size: $box-size * (1 + $clip-distance * 2);
 $path-width: 2px;
 $header-second-border-size: 60px;
 
-$media-desktop: "screen and (min-width : 1000px)";
+$media-desktop: "screen and (min-width : 1200px)";
 
 @mixin translateAndRotate($transform, $rotate) {
   -webkit-transform: translateY($transform) rotate($rotate);
@@ -210,11 +210,11 @@ button {
     -o-transition: all .3s ease;
     transition: all .3s ease;
     &__left {
-      width: 50%;
+      width: 51%;
     }
     &__right {
-      width: 50%;
-      margin-left: 50%;
+      width: 51%;
+      margin-left: 49%;
     }
   }
 }
@@ -331,8 +331,8 @@ button {
 .main-header {
   width: 100%;
   background: $header-img;
-  -webkit-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: 110%;
+  background-size: 110%;
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-attachment: fixed;

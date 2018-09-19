@@ -5,12 +5,12 @@ $(function () {
             $("#error").html(msg + xhr.status + " " + xhr.statusText);
         }
     });
-    // $("#s2-text").load("umiejetnosci.html", function (response, status, xhr) {
-    //     if (status == "error") {
-    //         var msg = "Wystąpił błąd podczas ładowania strony: ";
-    //         $("#error").html(msg + xhr.status + " " + xhr.statusText);
-    //     }
-    // });
+    $("#s2-text").load("skills/skills.html", function (response, status, xhr) {
+        if (status == "error") {
+            var msg = "Wystąpił błąd podczas ładowania strony: ";
+            $("#error").html(msg + xhr.status + " " + xhr.statusText);
+        }
+    });
     // $("#s3-text").load("edukacja.html", function (response, status, xhr) {
     //     if (status == "error") {
     //         var msg = "Wystąpił błąd podczas ładowania strony: ";
@@ -39,10 +39,11 @@ $(function () {
 
 
 });
-
-const app = (() => {
+$(document).ready(function () {
     $(".navbar").addClass("nav-inactive");
     $(".nav-icon__line").addClass("nav-icon-inactive");
+    $(".other-skills").addClass("hide-skills");
+
     $(".nav-icon").on("click", (() => {
         //alert("KLIK");
         $(".navbar").toggleClass("nav-inactive", "nav-active");
@@ -52,6 +53,7 @@ const app = (() => {
         // $(".nav-icon__line__left").addClass("up-bar-change");
         $(".nav-icon__line__right").addClass("nav-icon-active");
     }));
+
 
     var images = [].slice.call(document.querySelectorAll('.js-parallax-bg'));
 
@@ -91,7 +93,6 @@ const app = (() => {
         }
     }
 
-    1
     Gator(window).on('scroll', doParallax);
 
-})();
+});

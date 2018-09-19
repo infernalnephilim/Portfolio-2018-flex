@@ -22,11 +22,11 @@ $media-desktop: "screen and (min-width : 1000px)";
     padding: 10px;
     margin-right: $img-translation-value;
     margin-bottom: $img-translation-value;
-    max-width: 100%;
+    max-width: 400px;
 
     img {
-      max-width: 100%;
-      //width: 400px;
+      //max-width: 400px;
+      width: 100%;
 
       -webkit-transform: translate($img-translation-value, $img-translation-value);
       -moz-transform: translate($img-translation-value, $img-translation-value);
