@@ -32,6 +32,10 @@ a {
   transition: all ease 0.4s; }
   a:hover {
     color: #c31432; }
+  a:focus {
+    -webkit-box-shadow: inset 0px 0px 4px #c31432;
+    -moz-box-shadow: inset 0px 0px 4px #c31432;
+    box-shadow: inset 0px 0px 4px #c31432; }
 
 h1, h2 {
   font-family: "Parisienne", sans-serif;

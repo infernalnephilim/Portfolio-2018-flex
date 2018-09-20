@@ -116,6 +116,11 @@ a {
   &:hover {
     color: $decoration-color;
   }
+  &:focus{
+    -webkit-box-shadow: inset 0px 0px 4px $decoration-color;
+    -moz-box-shadow: inset 0px 0px 4px $decoration-color;
+    box-shadow: inset 0px 0px 4px $decoration-color;
+  }
 }
 
 h1, h2 {
