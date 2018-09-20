@@ -24,25 +24,34 @@
         margin: 10px; } }
     .skills__row__img {
       flex: 1;
-      padding: 20px; }
+      padding: 30px 30px 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
     .skills__row__text {
       flex: 1;
       width: 100%;
-      padding: 20px; }
+      padding: 10px 30px; }
+      .skills__row__text p {
+        text-align: justify; }
     @media screen and (min-width: 1200px) {
       .skills__row .flex-order-swap {
         order: 2; } }
-  .skills img {
-    max-width: 50%;
-    -webkit-filter: grayscale(100%);
-    /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-    -webkit-transition: all ease 0.4s;
-    -moz-transition: all ease 0.4s;
-    -ms-transition: all ease 0.4s;
-    -o-transition: all ease 0.4s;
-    transition: all ease 0.4s; }
-    .skills img:hover {
+    .skills__row img {
+      max-width: 50%;
+      -webkit-filter: grayscale(100%);
+      /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      -webkit-transition: all ease 0.4s;
+      -moz-transition: all ease 0.4s;
+      -ms-transition: all ease 0.4s;
+      -o-transition: all ease 0.4s;
+      transition: all ease 0.4s; }
+      .skills__row img:hover {
+        -webkit-filter: grayscale(0%);
+        /* Safari 6.0 - 9.0 */
+        filter: grayscale(0%); }
+    .skills__row:hover img {
       -webkit-filter: grayscale(0%);
       /* Safari 6.0 - 9.0 */
       filter: grayscale(0%); }

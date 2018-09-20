@@ -209,8 +209,8 @@ button {
 .main-header {
   width: 100%;
   background: url("../img/apple-691282_1920.jpg");
-  -webkit-background-size: 110%;
-  background-size: 110%;
+  -webkit-background-size: auto 110%;
+  background-size: auto 110%;
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-attachment: fixed;

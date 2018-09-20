@@ -9,9 +9,10 @@ $media-desktop: "screen and (min-width : 1200px)";
   transition: all ease $time;
 }
 
-.main-skills{
+.main-skills {
   z-index: 2;
 }
+
 .skills {
   @include transition-ease(.5s);
 
@@ -20,6 +21,7 @@ $media-desktop: "screen and (min-width : 1200px)";
   flex-wrap: wrap;
   justify-content: center;
   &__row {
+    $padding: 30px;
     //flex: 1;
     display: flex;
     flex-direction: column;
@@ -33,51 +35,68 @@ $media-desktop: "screen and (min-width : 1200px)";
       flex-basis: calc(50% - 50px);
       margin: 10px;
     }
-      &__img {
+    &__img {
       flex: 1;
-      padding: 20px;
+      padding: $padding $padding 10px $padding;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     &__text {
       flex: 1;
       width: 100%;
-      padding: 20px;
+      padding: 10px $padding;
+      p {
+        text-align: justify;
+      }
     }
     .flex-order-swap {
       @media #{$media-desktop} {
         order: 2;
       }
     }
-  }
-  img {
-    max-width: 50%;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-    @include transition-ease(.4s);
+    img {
+      max-width: 50%;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      @include transition-ease(.4s);
+      &:hover {
+        -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(0%);
+      }
+    }
     &:hover {
-      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-      filter: grayscale(0%);
+      img {
+        -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(0%);
+      }
     }
   }
+
 }
-.skills-wrapper{
+
+.skills-wrapper {
   overflow: hidden;
   @include transition-ease(.5s);
 
 }
-.other-skills{
+
+.other-skills {
   display: none;
   //display: flex;
   //animation: 1s ease-out 0s 1 hide;
 
 }
-.hide-skills{
+
+.hide-skills {
   animation: 1s ease-out 0s 1 hide;
 }
-.display-none{
+
+.display-none {
   display: none;
 }
 
-.show-skills{
+.show-skills {
   display: flex;
   animation: 1s ease-out 0s 1 fadeInFromTop;
 }
@@ -92,6 +111,7 @@ $media-desktop: "screen and (min-width : 1200px)";
     transform: translateY(0);
   }
 }
+
 @keyframes hide {
   0% {
     opacity: 1;
@@ -102,7 +122,7 @@ $media-desktop: "screen and (min-width : 1200px)";
     transform: translateY(-10%);
 
   }
-  100%{
+  100% {
     display: none;
   }
 }
