@@ -163,6 +163,12 @@ button {
     border: 2px solid $decoration-color;
     cursor: pointer;
   }
+  &:focus{
+    outline: none;
+  }
+  &:active{
+    background: $decoration-color;
+  }
 }
 
 .container {

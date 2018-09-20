@@ -66,6 +66,10 @@ button {
   button:hover {
     border: 2px solid #c31432;
     cursor: pointer; }
+  button:focus {
+    outline: none; }
+  button:active {
+    background: #c31432; }
 
 .container {
   margin: auto;
