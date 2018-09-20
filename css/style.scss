@@ -74,6 +74,7 @@ $media-desktop: "screen and (min-width : 1200px)";
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   //border: 1px solid red;
+  -webkit-tap-highlight-color: $decoration-color;
 }
 
 body {
@@ -115,11 +116,6 @@ a {
   @include transition-ease(.4s);
   &:hover {
     color: $decoration-color;
-  }
-  &:focus{
-    -webkit-box-shadow: inset 0px 0px 4px $decoration-color;
-    -moz-box-shadow: inset 0px 0px 4px $decoration-color;
-    box-shadow: inset 0px 0px 4px $decoration-color;
   }
 }
 
@@ -189,8 +185,9 @@ button {
 
 .nav-icon {
   $size: 60px;
+  $sizeY: 40px;
   $padding: 10px;
-  height: $size;
+  height: $sizeY;
   width: $size;
   position: fixed;
   top: 20px;
