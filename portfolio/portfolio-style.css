@@ -1,0 +1,47 @@
+.portfolio-wrapper {
+  width: 100%; }
+  .portfolio-wrapper .featured-projects {
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px; }
+    .portfolio-wrapper .featured-projects .item {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      position: relative;
+      height: 1000px;
+      max-height: 1000px;
+      margin-bottom: 50px; }
+      .portfolio-wrapper .featured-projects .item__img {
+        width: 100%;
+        height: 100%; }
+        .portfolio-wrapper .featured-projects .item__img.dermina-bg {
+          background: url("../img/dermina_featured.jpg");
+          background-repeat: no-repeat;
+          -webkit-background-size: cover;
+          background-size: cover;
+          background-position: 50% 15%; }
+      .portfolio-wrapper .featured-projects .item__text {
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+        margin-bottom: -50px;
+        background: #000;
+        padding: 50px;
+        color: #fff; }
+        .portfolio-wrapper .featured-projects .item__text p {
+          margin-bottom: 10px; }
+  .portfolio-wrapper .other-projects {
+    display: flex;
+    width: 100%; }
+    .portfolio-wrapper .other-projects .item {
+      flex: 1;
+      width: 25%;
+      max-width: 25%; }
+      .portfolio-wrapper .other-projects .item__img {
+        max-width: 100%;
+        padding: 1px; }
+      .portfolio-wrapper .other-projects .item__text {
+        padding: 10px; }
+
+/*# sourceMappingURL=portfolio-style.css.map */

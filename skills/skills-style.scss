@@ -1,5 +1,7 @@
 $decoration-color: #c31432;
+$decoration-color-2: #F1C40F;
 $media-desktop: "screen and (min-width : 1200px)";
+$skills-button-border-color: #e5e5e5;
 
 @mixin transition-ease($time) {
   -webkit-transition: all ease $time;
@@ -20,6 +22,9 @@ $media-desktop: "screen and (min-width : 1200px)";
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  h4 {
+    font-size: 1.5em;
+  }
   &__row {
     $padding: 30px;
     //flex: 1;
@@ -75,17 +80,61 @@ $media-desktop: "screen and (min-width : 1200px)";
 
 }
 
-.skills-wrapper {
+.other-skills-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 20px 40px 0px 40px;
+  text-align: center;
+  border-bottom: 2px solid $skills-button-border-color;
+  cursor: pointer;
+  @include transition-ease(.5s);
+  &:hover{
+    border-color: $decoration-color-2;
+    //background-color: #fff;
+    color: $decoration-color-2;
+    .fa-arrow-down {
+      color: $decoration-color-2;
+    }
+  }
+}
+
+.fa-arrow-down {
+  color: #c8c8c8;
+  @include transition-ease(.5s);
+}
+
+.fa-arrow-down.collapse {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.other-skills-wrapper {
   overflow: hidden;
+  position: relative;
+  height: auto;
   @include transition-ease(.5s);
 
 }
 
 .other-skills {
-  display: none;
+  //border: 1px solid $decoration-color;
+  display: flex;
   //display: flex;
   //animation: 1s ease-out 0s 1 hide;
+  max-height: 0;
+  -webkit-transition: max-height -2s 3s ease-out;
+  transition: max-height -2s 3s ease-out;
+}
 
+.other-skills.collapse {
+  max-height: 9999px;
+  -webkit-transition: max-height 2s ease-in;
+  transition: max-height 2s ease-in;
 }
 
 .hide-skills {
@@ -98,7 +147,7 @@ $media-desktop: "screen and (min-width : 1200px)";
 
 .show-skills {
   display: flex;
-  animation: 1s ease-out 0s 1 fadeInFromTop;
+  //animation: 1s ease-out 0s 1 fadeInFromTop;
 }
 
 @keyframes fadeInFromTop {

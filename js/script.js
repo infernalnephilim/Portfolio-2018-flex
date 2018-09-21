@@ -17,12 +17,12 @@ $(function () {
     //         $("#error").html(msg + xhr.status + " " + xhr.statusText);
     //     }
     // });
-    // $("#s4-text").load("portfolio.html", function (response, status, xhr) {
-    //     if (status == "error") {
-    //         var msg = "Wystąpił błąd podczas ładowania strony: ";
-    //         $("#error").html(msg + xhr.status + " " + xhr.statusText);
-    //     }
-    // });
+    $("#s4-text").load("portfolio/portfolio.html", function (response, status, xhr) {
+        if (status == "error") {
+            var msg = "Wystąpił błąd podczas ładowania strony: ";
+            $("#error").html(msg + xhr.status + " " + xhr.statusText);
+        }
+    });
     $("#s5-text").load("contact/contact.html", function (response, status, xhr) {
         if (status == "error") {
             var msg = "Wystąpił błąd podczas ładowania strony: ";
@@ -46,7 +46,8 @@ $(document).ready(function () {
 
     $(".nav-icon").on("click", (() => {
         //alert("KLIK");
-        $(".navbar").toggleClass("nav-inactive", "nav-active");
+        // $(".navbar").toggleClass("nav-inactive", "nav-active");
+        $(".navbar").toggleClass("opened");
         $(".nav-icon__line").toggleClass("nav-icon-inactive", "nav-icon-active");
         $(".nav-icon__line").addClass("nav-icon-active-2");
         $(".nav-icon__line__left").addClass("nav-icon-active");

@@ -94,6 +94,7 @@ header {
 }
 
 section {
+  position: relative;
   overflow-x: hidden;
   padding: 150px 0px;
   &:after {
@@ -163,17 +164,24 @@ button {
     border: 2px solid $decoration-color;
     cursor: pointer;
   }
-  &:focus{
+  &:focus {
     outline: none;
   }
-  &:active{
+  &:active {
     background: $decoration-color;
   }
 }
 
 .container {
   margin: auto;
-  max-width: 1170px;
+  max-width: 1480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-full {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,7 +189,7 @@ button {
 
 .section-content {
   width: 100%;
-  padding: 10px;
+  //padding: 10px;
 }
 
 .section-header {
@@ -191,19 +199,24 @@ button {
 
 .nav-icon {
   $size: 60px;
-  $sizeY: 40px;
-  $padding: 10px;
+  $sizeY: 60px;
+  $padding: 20px 10px;
   height: $sizeY;
   width: $size;
   position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 3;
+  z-index: 4;
   cursor: pointer;
   padding: $padding;
   @media #{$media-desktop} {
     top: 50px;
     left: 50px;
+  }
+  &:hover {
+    .nav-icon__line {
+      background: $header-hover-underline-color;
+    }
   }
   //border: 2px solid $decoration-color;
   &__line {
@@ -211,27 +224,30 @@ button {
     height: 4px;
     width: $size - 20px;
     background-color: $decoration-color;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
     &__left {
-      width: 51%;
+      width: 55%;
     }
     &__right {
-      width: 51%;
-      margin-left: 49%;
+      width: 55%;
+      margin-left: 45%;
     }
   }
 }
-.down-bar-change{
+
+.down-bar-change {
 
 }
-.up-bar-change{
+
+.up-bar-change {
   @include translateAndRotate(10px, 45deg);
 }
+
 .nav-icon-active-2 {
   @include rotate(-45deg);
 }
@@ -245,14 +261,17 @@ button {
 }
 
 .nav-active {
-  display: flex;
+  //display: flex;
 }
 
 .nav-inactive {
-  display: none;
+  //display: none;
 }
 
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: $navbar-bg-color;
   position: fixed;
   top: 0;
@@ -261,18 +280,23 @@ button {
   width: 100%;
   z-index: 2;
   color: $header-text-color;
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  opacity: 0;
+  @include transition-ease(.5s);
+  @include translate(-100%, 0%);
+  &.opened {
+    @include translate(0%, 0%);
+    opacity: 1;
+  }
+
   .nav-content {
     height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    z-index: 4;
   }
+
   .navbar-brand span {
     font-family: 'Megrim', cursive;
     //font-family: 'Wire One', sans-serif;
@@ -280,6 +304,7 @@ button {
 
     letter-spacing: 2px;
   }
+
   .navbar-nav {
     font-weight: bold;
     letter-spacing: 1px;
@@ -295,6 +320,8 @@ button {
       padding: 10px;
       margin: 10px;
       font-size: 1.5em;
+      opacity: 0;
+      @include transition-ease(1.8s);
       @media #{$media-desktop} {
         padding: 20px;
         margin: 20px;
@@ -310,11 +337,7 @@ button {
         transition: transform 250ms ease-in-out;
       }
       .nav-link {
-        -webkit-transition: all .3s ease;
-        -moz-transition: all .3s ease;
-        -ms-transition: all .3s ease;
-        -o-transition: all .3s ease;
-        transition: all .3s ease;
+        @include transition-ease(.3s);
       }
       &:hover {
         .nav-link {
@@ -328,9 +351,23 @@ button {
       }
     }
   }
+  &.opened {
+    .navbar-nav {
+      .nav-item {
+        opacity: 1;
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            transition-delay: .5s + $i * .1s;
+          }
+        }
+      }
+    }
+  }
+
   .custom-toggler.navbar-toggler {
     //border-color: $menu-icon-color;
   }
+
   .custom-toggler .navbar-toggler-icon {
     //background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
@@ -339,7 +376,7 @@ button {
 .main-header {
   width: 100%;
   background: $header-img;
-  -webkit-background-size:  auto 130%;
+  -webkit-background-size: auto 130%;
   background-size: auto 130%;
   background-repeat: no-repeat;
   background-position: 50% 0%;
@@ -412,8 +449,6 @@ button {
       bottom: 0;
       left: 0;
       right: 0;
-      //z-index: 1;
-      //background: #000;
       margin: -1 * 0.02 * 100%;
       box-shadow: inset 0 0 0 4px $decoration-color;
       //animation: clipMe 8s linear infinite;
@@ -444,7 +479,6 @@ button {
       text-align: right;
     }
   }
-
 }
 
 @keyframes slideInFromLeft {
