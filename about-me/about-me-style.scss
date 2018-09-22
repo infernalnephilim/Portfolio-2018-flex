@@ -1,9 +1,6 @@
-$decoration-color: #c31432;
-$grey: #F6F6F6;
+@import '../variables';
 
 $img-translation-value: 30px;
-
-$media-desktop: "screen and (min-width : 1000px)";
 
 .about-me {
   display: flex;

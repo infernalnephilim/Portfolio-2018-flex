@@ -1,6 +1,5 @@
-$decoration-color: #c31432;
-$decoration-color-2: #F1C40F;
-$media-desktop: "screen and (min-width : 1200px)";
+@import '../variables';
+
 $skills-button-border-color: #e5e5e5;
 
 @mixin transition-ease($time) {

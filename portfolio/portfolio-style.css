@@ -1,17 +1,64 @@
 .portfolio-wrapper {
   width: 100%; }
+  .portfolio-wrapper .technologies {
+    color: grey;
+    font-size: .8em; }
+  .portfolio-wrapper h4 {
+    font-size: 1.5em;
+    margin: 0; }
+    @media screen and (min-width: 1200px) {
+      .portfolio-wrapper h4 {
+        font-size: 2em; } }
+  .portfolio-wrapper h5 {
+    font-weight: normal;
+    color: grey; }
+  .portfolio-wrapper p {
+    margin: 30px 0px;
+    font-size: 1.1em; }
   .portfolio-wrapper .featured-projects {
-    display: flex;
     width: 100%;
-    margin-bottom: 50px; }
+    position: relative; }
+    .portfolio-wrapper .featured-projects__title {
+      position: absolute;
+      top: 10px;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 10;
+      color: white;
+      padding: 20px; }
+      .portfolio-wrapper .featured-projects__title h4 {
+        padding: 0px 20px; }
+    .portfolio-wrapper .featured-projects__arrow {
+      position: absolute;
+      top: 45%;
+      font-size: 60px;
+      z-index: 11;
+      color: white;
+      padding: 30px;
+      -webkit-transition: all ease 0.5s;
+      -moz-transition: all ease 0.5s;
+      -ms-transition: all ease 0.5s;
+      -o-transition: all ease 0.5s;
+      transition: all ease 0.5s; }
+      .portfolio-wrapper .featured-projects__arrow:hover {
+        color: #F1C40F;
+        cursor: pointer; }
+    .portfolio-wrapper .featured-projects__arrow-left {
+      left: 0; }
+    .portfolio-wrapper .featured-projects__arrow-right {
+      right: 0; }
     .portfolio-wrapper .featured-projects .item {
       display: flex;
-      flex: 1;
+      justify-content: center;
+      flex-direction: column;
       width: 100%;
       position: relative;
-      height: 1000px;
-      max-height: 1000px;
-      margin-bottom: 50px; }
+      height: 400px;
+      margin-bottom: 250px; }
+      @media screen and (min-width: 1200px) {
+        .portfolio-wrapper .featured-projects .item {
+          height: 800px;
+          max-height: 800px;
+          flex-direction: row; } }
       .portfolio-wrapper .featured-projects .item__img {
         width: 100%;
         height: 100%; }
@@ -20,28 +67,81 @@
           background-repeat: no-repeat;
           -webkit-background-size: cover;
           background-size: cover;
-          background-position: 50% 15%; }
+          background-position: 50% 30%; }
+      .portfolio-wrapper .featured-projects .item .container {
+        width: 100%;
+        align-items: flex-start;
+        justify-content: center; }
+        @media screen and (min-width: 1200px) {
+          .portfolio-wrapper .featured-projects .item .container {
+            position: absolute;
+            bottom: -50px;
+            justify-content: left; } }
       .portfolio-wrapper .featured-projects .item__text {
-        position: absolute;
-        bottom: 0;
-        left: 20%;
-        margin-bottom: -50px;
+        position: relative;
         background: #000;
         padding: 50px;
-        color: #fff; }
-        .portfolio-wrapper .featured-projects .item__text p {
-          margin-bottom: 10px; }
+        color: #fff;
+        width: 100%; }
+        @media screen and (min-width: 1200px) {
+          .portfolio-wrapper .featured-projects .item__text {
+            width: auto; } }
+        .portfolio-wrapper .featured-projects .item__text::before, .portfolio-wrapper .featured-projects .item__text::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: -2%;
+          box-shadow: inset 0 0 0 4px #c31432; }
+        .portfolio-wrapper .featured-projects .item__text::after {
+          -webkit-clip-path: polygon(0px 0px, 60px 0px, 60px 60px, 0px 60px);
+          clip-path: polygon(0px 0px, 60px 0px, 60px 60px, 0px 60px); }
+        .portfolio-wrapper .featured-projects .item__text::before {
+          animation-delay: -4s;
+          -webkit-clip-path: polygon(calc(100% - 60px) calc(100% - 60px), 100% calc(100% - 60px), 100% 100%, calc(100% - 60px) 100%);
+          clip-path: polygon(calc(100% - 60px) calc(100% - 60px), 100% calc(100% - 60px), 100% 100%, calc(100% - 60px) 100%); }
   .portfolio-wrapper .other-projects {
     display: flex;
-    width: 100%; }
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
     .portfolio-wrapper .other-projects .item {
-      flex: 1;
-      width: 25%;
-      max-width: 25%; }
+      position: relative;
+      width: 100%;
+      max-width: 100%; }
+      @media screen and (min-width: 1200px) {
+        .portfolio-wrapper .other-projects .item {
+          width: 25%;
+          max-width: 25%; } }
       .portfolio-wrapper .other-projects .item__img {
+        width: 100%;
         max-width: 100%;
         padding: 1px; }
       .portfolio-wrapper .other-projects .item__text {
-        padding: 10px; }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        color: white;
+        opacity: 0;
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -ms-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+        transition: all ease 0.5s; }
+        .portfolio-wrapper .other-projects .item__text:hover {
+          opacity: 1; }
+        .portfolio-wrapper .other-projects .item__text a {
+          margin-top: 20px; }
 
 /*# sourceMappingURL=portfolio-style.css.map */

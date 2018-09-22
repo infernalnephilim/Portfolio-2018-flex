@@ -1,31 +1,4 @@
-$white: #ffffff;
-$grey: #F6F6F6;
-$lightgrey: #eee;
-$decoration-color-b: #c31432;
-$decoration-color-b-2: #240b36;
-$violet: #741071;
-$blue: #1565C0;
-$decoration-color: $decoration-color-b;
-$decoration-color2: $decoration-color-b;
-
-$menu-icon-color: $white;
-$header-text-color: $white;
-$header-hover-underline-color: #F1C40F;
-$bg-color: $white;
-$header-bg-color: #FAFAFA;
-$navbar-bg-color: rgba(0, 0, 0, 0.95);
-$header-img: url("../img/apple-691282_1920.jpg");
-
-$header-arrow-rotation: -45deg;
-$header-arrow-translation: 5px;
-
-$box-size: 500px;
-$clip-distance: .05;
-$clip-size: $box-size * (1 + $clip-distance * 2);
-$path-width: 2px;
-$header-second-border-size: 60px;
-
-$media-desktop: "screen and (min-width : 1200px)";
+@import '../variables';
 
 @mixin translateAndRotate($transform, $rotate) {
   -webkit-transform: translateY($transform) rotate($rotate);
@@ -60,13 +33,6 @@ $media-desktop: "screen and (min-width : 1200px)";
   transform: translate($x, $y);
 }
 
-@mixin transition-ease($time) {
-  -webkit-transition: all ease $time;
-  -moz-transition: all ease $time;
-  -ms-transition: all ease $time;
-  -o-transition: all ease $time;
-  transition: all ease $time;
-}
 
 * {
   -webkit-box-sizing: border-box;
@@ -120,7 +86,7 @@ a {
   }
 }
 
-h1, h2 {
+h1, h3{
   font-family: "Parisienne", sans-serif;
   //font-family: "Alex Brush", sans-serif;
   //font-family: "Allura", sans-serif;
@@ -135,7 +101,7 @@ h1, h2 {
   font-weight: lighter;
 }
 
-h2 {
+h3 {
   text-align: center;
   font-size: 3em;
   @media #{$media-desktop} {
@@ -143,14 +109,21 @@ h2 {
   }
 }
 
-h2:after {
-  content: '';
-  //display: block;
-  margin: 10px auto 15px;
-  width: 100px;
-  max-width: 90%;
-  height: 4px;
-  background: $decoration-color;
+h2{
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 5em;
+  color: #f9f9f9;
+  z-index: 0;
+  text-transform: uppercase;
+  @media #{$media-desktop} {
+    font-size: 10em;
+    left: 50px;
+    top: 20px;
+  }
 }
 
 button {
@@ -416,7 +389,7 @@ button {
       width: 30px;
       height: 30px;
       margin-bottom: 0;
-      border-bottom: solid $decoration-color2 6px;
+      border-bottom: solid $decoration-color-2 6px;
       border-left: solid $decoration-color 6px;
       animation: move-arrow-2 1.5s infinite;
       -webkit-animation-delay: .3s;

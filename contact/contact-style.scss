@@ -44,6 +44,9 @@ $grey: #F6F6F6;
 }
 
 .contact-section {
+  h2{
+    color: #0b0b0b;
+  }
   &__content {
     width: 100%;
     display: flex;
@@ -64,7 +67,7 @@ $grey: #F6F6F6;
       @media #{$media-desktop} {
         margin-right: 10px;
         flex: 1;
-        h2{
+        h3{
           text-align: left;
         }
       }
@@ -75,7 +78,7 @@ $grey: #F6F6F6;
 
       @media #{$media-desktop} {
         flex: 2;
-        h2{
+        h3{
           text-align: center;
         }
       }

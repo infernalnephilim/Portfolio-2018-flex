@@ -35,24 +35,32 @@ a {
   a:hover {
     color: #c31432; }
 
-h1, h2 {
+h1, h3 {
   font-family: "Parisienne", sans-serif;
   font-weight: lighter; }
 
-h2 {
+h3 {
   text-align: center;
   font-size: 3em; }
   @media screen and (min-width: 1200px) {
-    h2 {
+    h3 {
       font-size: 4em; } }
 
-h2:after {
-  content: '';
-  margin: 10px auto 15px;
-  width: 100px;
-  max-width: 90%;
-  height: 4px;
-  background: #c31432; }
+h2 {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 5em;
+  color: #f9f9f9;
+  z-index: 0;
+  text-transform: uppercase; }
+  @media screen and (min-width: 1200px) {
+    h2 {
+      font-size: 10em;
+      left: 50px;
+      top: 20px; } }
 
 button {
   color: #ffffff;
@@ -288,7 +296,7 @@ button {
       width: 30px;
       height: 30px;
       margin-bottom: 0;
-      border-bottom: solid #c31432 6px;
+      border-bottom: solid #F1C40F 6px;
       border-left: solid #c31432 6px;
       animation: move-arrow-2 1.5s infinite;
       -webkit-animation-delay: .3s;
