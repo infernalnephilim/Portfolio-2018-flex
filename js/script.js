@@ -37,14 +37,25 @@ $(function () {
     // });
     //$(".nav-item:nth-child(1)").addClass("active");
 
+    $('a[href^="#"]').on("click", () => {
 
+        var the_id = $(this).attr("href");
+
+        $('html, body').animate({
+            scrollTop: $(the_id).offset().top
+        }, 'slow');
+
+        return false;
+    });
 });
 $(document).ready(function () {
+
+
     $(".navbar").addClass("nav-inactive");
     $(".nav-icon__line").addClass("nav-icon-inactive");
     $(".other-skills").addClass("hide-skills");
 
-    $(".nav-icon").on("click", (() => {
+    $(".nav-icon").on("click", () => {
         //alert("KLIK");
         // $(".navbar").toggleClass("nav-inactive", "nav-active");
         $(".navbar").toggleClass("opened");
@@ -53,7 +64,7 @@ $(document).ready(function () {
         $(".nav-icon__line__left").addClass("nav-icon-active");
         // $(".nav-icon__line__left").addClass("up-bar-change");
         $(".nav-icon__line__right").addClass("nav-icon-active");
-    }));
+    });
 
 
     var images = [].slice.call(document.querySelectorAll('.js-parallax-bg'));
