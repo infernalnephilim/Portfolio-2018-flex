@@ -37,7 +37,7 @@
     }
     &__arrow {
       position: absolute;
-      top: 45%;
+      top: 25%;
       font-size: 60px;
       z-index: 11;
       color: white;
@@ -46,6 +46,9 @@
       &:hover {
         color: $decoration-color-2;
         cursor: pointer;
+      }
+      @media #{$media-desktop} {
+        top: 40%;
       }
     }
     &__arrow-left {
@@ -62,6 +65,8 @@
       position: relative;
       height: 400px;
       margin-bottom: 100px;
+      background: #fff;
+
       @media #{$media-desktop} {
         height: 800px;
         max-height: 800px;
@@ -70,7 +75,6 @@
       &__img {
         width: 100%;
         height: 100%;
-
         &.dermina-bg {
           background: url("../img/dermina_featured.jpg");
           background-position: 50% 30%;
@@ -107,88 +111,48 @@
         padding: 30px;
         color: #fff;
         width: 100%;
+        //@include translate(50px, 50px);
         @media #{$media-desktop} {
           width: auto;
           padding: 50px;
-        }
-        //@include translate(50px, 50px);
-        &::before, &::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          margin: -1 * 0.02 * 100%;
-          box-shadow: inset 0 0 0 4px $decoration-color;
-          //animation: clipMe 8s linear infinite;
-        }
-        &::after {
-          -webkit-clip-path: polygon(0px 0px, 60px 0px, 60px 60px, 0px 60px);
-          clip-path: polygon(0px 0px, 60px 0px, 60px 60px, 0px 60px);
-        }
-        &::before {
-          animation-delay: 8s * -.5;
-          -webkit-clip-path: polygon(calc(100% - 60px) calc(100% - 60px), 100% calc(100% - 60px), 100% 100%, calc(100% - 60px) 100%);
-          clip-path: polygon(calc(100% - 60px) calc(100% - 60px), 100% calc(100% - 60px), 100% 100%, calc(100% - 60px) 100%);
+          &::before, &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: -1 * 0.02 * 100%;
+            box-shadow: inset 0 0 0 4px $decoration-color;
+            //animation: clipMe 8s linear infinite;
+          }
+          &::after {
+            -webkit-clip-path: polygon(0px 0px, 60px 0px, 60px 60px, 0px 60px);
+            clip-path: polygon(0px 0px, 60px 0px, 60px 60px, 0px 60px);
+          }
+          &::before {
+            animation-delay: 8s * -.5;
+            -webkit-clip-path: polygon(calc(100% - 60px) calc(100% - 60px), 100% calc(100% - 60px), 100% 100%, calc(100% - 60px) 100%);
+            clip-path: polygon(calc(100% - 60px) calc(100% - 60px), 100% calc(100% - 60px), 100% 100%, calc(100% - 60px) 100%);
+          }
         }
         h5 {
           padding: 0;
-          margin: 10px 0;
+          margin: 5px 0;
           @media #{$media-desktop} {
             margin: 20px 0;
           }
         }
         p {
           padding: 0;
-          margin: 10px 0;
+          margin: 5px 0;
           @media #{$media-desktop} {
             margin: 20px 0;
           }
         }
-
-      }
-    }
-    .other-projects {
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      .item {
-        position: relative;
-        //flex: 1;
-        width: 100%;
-        max-width: 100%;
-        @media #{$media-desktop} {
-          width: 25%;
-          max-width: 25%;
-        }
-        &__img {
-          width: 100%;
-          max-width: 100%;
-          padding: 1px;
-        }
-        &__text {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          padding: 20px;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: rgba(0, 0, 0, 0.9);
-          color: white;
-          opacity: 0;
-          @include transition-ease(.5s);
-
-          &:hover {
-            opacity: 1;
-          }
-          a {
+        button {
+          margin-top: 10px;
+          @media #{$media-desktop} {
             margin-top: 20px;
           }
         }
@@ -196,3 +160,67 @@
       }
     }
   }
+  .other-projects {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .item {
+      position: relative;
+      //flex: 1;
+      width: 100%;
+      max-width: 100%;
+      @media #{$media-desktop} {
+        width: 25%;
+        max-width: 25%;
+      }
+      &__img {
+        width: 100%;
+        max-width: 100%;
+        padding: 1px;
+      }
+      &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        color: white;
+        opacity: 0;
+        @include transition-ease(.5s);
+
+        &:hover {
+          opacity: 1;
+        }
+        a {
+          margin-top: 10px;
+          @media #{$media-desktop} {
+            margin-top: 20px;
+          }
+        }
+        h5{
+          margin: 0;
+        }
+        h4{
+          margin: 5px 0px;
+        }
+        p {
+          text-align: center;
+          padding: 0;
+          margin: 5px 0;
+          @media #{$media-desktop} {
+            margin: 20px 0;
+          }
+        }
+      }
+
+    }
+  }
+}
