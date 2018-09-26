@@ -9,7 +9,7 @@ $img-translation-value: 30px;
   padding: 10px;
   @media #{$media-desktop} {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
 
   &__picture {
@@ -19,7 +19,7 @@ $img-translation-value: 30px;
     padding: 10px;
     margin-right: $img-translation-value;
     margin-bottom: $img-translation-value;
-    max-width: 400px;
+    max-width: 500px;
 
     img {
       //max-width: 400px;
@@ -38,6 +38,9 @@ $img-translation-value: 30px;
 
     @media #{$media-desktop} {
       padding: 20px 80px;
+    }
+    h3{
+      margin-top: 10px;
     }
     &__description {
       //border: px $grey solid;
