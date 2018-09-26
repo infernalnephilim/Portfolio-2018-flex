@@ -39,7 +39,8 @@ $(function () {
 
     $('a[href^="#"]').click(function () {
         console.log("Smooth");
-        var the_id = $(this).attr("href");
+        const the_id = $(this).attr("href");
+        console.log(the_id);
 
         $('html, body').animate({
             scrollTop: $(the_id).offset().top
@@ -116,3 +117,4 @@ function getViewportScroll() {
     doc = doc.clientHeight ? doc : document.body;
     return doc.scrollTop;
 }
+
