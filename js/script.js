@@ -37,54 +37,37 @@ $(function () {
     // });
     //$(".nav-item:nth-child(1)").addClass("active");
 
-    $('a[href^="#"]').on("click", () => {
-
+    $('a[href^="#"]').click(function () {
+        console.log("Smooth");
         var the_id = $(this).attr("href");
 
         $('html, body').animate({
             scrollTop: $(the_id).offset().top
         }, 'slow');
 
+        toggleNavbar();
+
         return false;
     });
 });
-$(document).ready(function () {
 
+$(document).ready(function () {
+    $(".navbar-nav .nav-item:nth-child(1) .nav-link").addClass("active");
+    $(".navbar-nav .nav-item .nav-link").on("click", function () {
+        $(".navbar-nav .nav-item .nav-link").removeClass("active");
+        $(this).addClass("active");
+    });
 
     $(".navbar").addClass("nav-inactive");
     $(".nav-icon__line").addClass("nav-icon-inactive");
     $(".other-skills").addClass("hide-skills");
 
     $(".nav-icon").on("click", () => {
-        //alert("KLIK");
-        // $(".navbar").toggleClass("nav-inactive", "nav-active");
-        $(".navbar").toggleClass("opened");
-        $(".nav-icon__line").toggleClass("nav-icon-inactive", "nav-icon-active");
-        $(".nav-icon__line").addClass("nav-icon-active-2");
-        $(".nav-icon__line__left").addClass("nav-icon-active");
-        // $(".nav-icon__line__left").addClass("up-bar-change");
-        $(".nav-icon__line__right").addClass("nav-icon-active");
+        toggleNavbar();
     });
 
 
     var images = [].slice.call(document.querySelectorAll('.js-parallax-bg'));
-
-    function getViewportHeight() {
-        var a = document.documentElement.clientHeight, b = window.innerHeight;
-        return a < b ? b : a;
-    }
-
-    function getViewportScroll() {
-        if (typeof window.scrollY != 'undefined') {
-            return window.scrollY;
-        }
-        if (typeof pageYOffset != 'undefined') {
-            return pageYOffset;
-        }
-        var doc = document.documentElement;
-        doc = doc.clientHeight ? doc : document.body;
-        return doc.scrollTop;
-    }
 
     function doParallax() {
         console.log("Scrolling");
@@ -108,3 +91,28 @@ $(document).ready(function () {
     Gator(window).on('scroll', doParallax);
 
 });
+
+function toggleNavbar() {
+    $(".navbar").toggleClass("opened");
+    $(".nav-icon__line").toggleClass("nav-icon-inactive", "nav-icon-active");
+    $(".nav-icon__line").addClass("nav-icon-active-2");
+    $(".nav-icon__line__left").addClass("nav-icon-active");
+    // $(".nav-icon__line__left").addClass("up-bar-change");
+    $(".nav-icon__line__right").addClass("nav-icon-active");
+}
+function getViewportHeight() {
+    var a = document.documentElement.clientHeight, b = window.innerHeight;
+    return a < b ? b : a;
+}
+
+function getViewportScroll() {
+    if (typeof window.scrollY != 'undefined') {
+        return window.scrollY;
+    }
+    if (typeof pageYOffset != 'undefined') {
+        return pageYOffset;
+    }
+    var doc = document.documentElement;
+    doc = doc.clientHeight ? doc : document.body;
+    return doc.scrollTop;
+}

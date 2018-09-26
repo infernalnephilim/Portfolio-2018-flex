@@ -1,8 +1,12 @@
+$headers-font-family: "Parisienne", sans-serif;
+$default-font-family: "Montserrat", sans-serif;
+
 $white: #ffffff;
 $grey: #F6F6F6;
 $lightgrey: #eee;
 $decoration-color-b: #c31432;
 $decoration-color-b-2: #240b36;
+$background-heading-color: #f9f9f9;
 $violet: #741071;
 $blue: #1565C0;
 $decoration-color: #c31432;
@@ -25,7 +29,9 @@ $clip-size: $box-size * (1 + $clip-distance * 2);
 $path-width: 2px;
 $header-second-border-size: 60px;
 
-$media-desktop: "screen and (min-width : 1200px)";
+$desktop-breakpoint: 1300px;
+
+$media-desktop: "screen and (min-width : 1300px)";
 
 
 @mixin transition-ease($time) {

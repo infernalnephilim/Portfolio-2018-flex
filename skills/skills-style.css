@@ -20,7 +20,7 @@
     align-items: center;
     width: 100%;
     background: white; }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1300px) {
       .skills__row {
         flex-basis: calc(50% - 50px);
         margin: 10px; } }
@@ -36,7 +36,7 @@
       padding: 10px 30px; }
       .skills__row__text p {
         text-align: justify; }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1300px) {
       .skills__row .flex-order-swap {
         order: 2; } }
     .skills__row img {

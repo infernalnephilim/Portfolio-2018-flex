@@ -1,12 +1,9 @@
 .portfolio-wrapper {
   width: 100%; }
-  .portfolio-wrapper .technologies {
-    color: grey;
-    font-size: .8em; }
   .portfolio-wrapper h4 {
     font-size: 1.5em;
     margin: 0; }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1300px) {
       .portfolio-wrapper h4 {
         font-size: 2em; } }
   .portfolio-wrapper h5 {
@@ -41,7 +38,7 @@
       .portfolio-wrapper .featured-projects__arrow:hover {
         color: #F1C40F;
         cursor: pointer; }
-      @media screen and (min-width: 1200px) {
+      @media screen and (min-width: 1300px) {
         .portfolio-wrapper .featured-projects__arrow {
           top: 40%; } }
     .portfolio-wrapper .featured-projects__arrow-left {
@@ -57,7 +54,7 @@
       height: 400px;
       margin-bottom: 100px;
       background: #fff; }
-      @media screen and (min-width: 1200px) {
+      @media screen and (min-width: 1300px) {
         .portfolio-wrapper .featured-projects .item {
           height: 800px;
           max-height: 800px;
@@ -81,7 +78,7 @@
         width: 100%;
         align-items: flex-start;
         justify-content: center; }
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1300px) {
           .portfolio-wrapper .featured-projects .item .container {
             position: absolute;
             bottom: -50px;
@@ -92,7 +89,7 @@
         padding: 30px;
         color: #fff;
         width: 100%; }
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1300px) {
           .portfolio-wrapper .featured-projects .item__text {
             width: auto;
             padding: 50px; }
@@ -115,18 +112,18 @@
         .portfolio-wrapper .featured-projects .item__text h5 {
           padding: 0;
           margin: 5px 0; }
-          @media screen and (min-width: 1200px) {
+          @media screen and (min-width: 1300px) {
             .portfolio-wrapper .featured-projects .item__text h5 {
               margin: 20px 0; } }
         .portfolio-wrapper .featured-projects .item__text p {
           padding: 0;
           margin: 5px 0; }
-          @media screen and (min-width: 1200px) {
+          @media screen and (min-width: 1300px) {
             .portfolio-wrapper .featured-projects .item__text p {
               margin: 20px 0; } }
         .portfolio-wrapper .featured-projects .item__text button {
           margin-top: 10px; }
-          @media screen and (min-width: 1200px) {
+          @media screen and (min-width: 1300px) {
             .portfolio-wrapper .featured-projects .item__text button {
               margin-top: 20px; } }
   .portfolio-wrapper .other-projects {
@@ -138,11 +135,22 @@
     .portfolio-wrapper .other-projects .item {
       position: relative;
       width: 100%;
-      max-width: 100%; }
-      @media screen and (min-width: 1200px) {
+      max-width: 100%;
+      border: solid 10px transparent; }
+      .portfolio-wrapper .other-projects .item::before {
+        content: '';
+        border: 1px solid #f9f9f9;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; }
+      @media screen and (min-width: 1300px) {
         .portfolio-wrapper .other-projects .item {
-          width: 25%;
-          max-width: 25%; } }
+          width: 50%;
+          max-width: 50%; } }
       .portfolio-wrapper .other-projects .item__img {
         width: 100%;
         max-width: 100%;
@@ -170,7 +178,7 @@
           opacity: 1; }
         .portfolio-wrapper .other-projects .item__text a {
           margin-top: 10px; }
-          @media screen and (min-width: 1200px) {
+          @media screen and (min-width: 1300px) {
             .portfolio-wrapper .other-projects .item__text a {
               margin-top: 20px; } }
         .portfolio-wrapper .other-projects .item__text h5 {
@@ -181,8 +189,31 @@
           text-align: center;
           padding: 0;
           margin: 5px 0; }
-          @media screen and (min-width: 1200px) {
+          @media screen and (min-width: 1300px) {
             .portfolio-wrapper .other-projects .item__text p {
               margin: 20px 0; } }
+
+.portfolio-header {
+  flex-direction: column;
+  padding: 40px 40px 60px 40px; }
+  .portfolio-header img {
+    padding: 10px;
+    width: 100%; }
+  .portfolio-header h1 {
+    font-size: 4em;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase; }
+  .portfolio-header a {
+    margin: 5px; }
+  .portfolio-header button {
+    min-width: 100px; }
+  .portfolio-header__logo {
+    align-self: flex-end;
+    font-family: "Parisienne", sans-serif;
+    padding: 20px;
+    text-align: right;
+    font-size: 2em; }
+  .portfolio-header .container {
+    flex-direction: column; }
 
 /*# sourceMappingURL=portfolio-style.css.map */
