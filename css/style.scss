@@ -176,6 +176,11 @@ button {
   text-align: center;
 }
 
+.btn-dark{
+    border-color: #000000;
+    color: #000;
+}
+
 .nav-icon {
   $size: 60px;
   $sizeY: 60px;
@@ -185,7 +190,7 @@ button {
   position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 4;
+  z-index: 10001;
   cursor: pointer;
   padding: $padding;
   @media #{$media-desktop} {
@@ -195,6 +200,11 @@ button {
   &:hover {
     .nav-icon__line {
       background: $header-hover-underline-color;
+    }
+  }
+  &:active {
+    .nav-icon__line {
+      background: $decoration-color;
     }
   }
   //border: 2px solid $decoration-color;
@@ -257,7 +267,7 @@ button {
   left: 0;
   height: 100vh;
   width: 100%;
-  z-index: 2;
+  z-index: 10000;
   color: $header-text-color;
   opacity: 0;
   @include transition-ease(.5s);
@@ -532,12 +542,13 @@ button {
     //opacity: 0;
   }
   50% {
-    //@include translateAndRotate($header-arrow-translation/2, $header-arrow-rotation)
+    @include translateAndRotate($header-arrow-translation, $header-arrow-rotation);
     //opacity: 1;
   }
   100% {
-    @include translateAndRotate($header-arrow-translation, $header-arrow-rotation);
+    //@include translateAndRotate($header-arrow-translation, $header-arrow-rotation);
     //opacity: 0;
+    @include translateAndRotate(0, $header-arrow-rotation);
   }
 }
 
@@ -566,6 +577,9 @@ button {
 }
 
 .skills-section {
+  background: $grey;
+}
+.cooperation-section {
   background: $grey;
 }
 

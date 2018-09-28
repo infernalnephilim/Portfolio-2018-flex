@@ -16,6 +16,7 @@
   .skills__row {
     display: flex;
     flex-direction: column;
+    margin: 10px;
     margin-bottom: 20px;
     align-items: center;
     width: 100%;

@@ -1,5 +1,6 @@
 class ImageSlider {
-    constructor(el, prev, next) {
+    constructor(el, prev, next, options) {
+        this.default
         this.sliderSelector = el;
         this.slider = null;
         this.prev = prev;

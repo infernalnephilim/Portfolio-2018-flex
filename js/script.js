@@ -1,11 +1,11 @@
 $(function () {
-    $("#s1-text").load("about-me/about-me.html", function (response, status, xhr) {
+    $("#s1-text").load("about-me/about-me-section.html", function (response, status, xhr) {
         if (status == "error") {
             var msg = "Wystąpił błąd podczas ładowania strony: ";
             $("#error").html(msg + xhr.status + " " + xhr.statusText);
         }
     });
-    $("#s2-text").load("skills/skills.html", function (response, status, xhr) {
+    $("#s2-text").load("../skills/skills.html", function (response, status, xhr) {
         if (status == "error") {
             var msg = "Wystąpił błąd podczas ładowania strony: ";
             $("#error").html(msg + xhr.status + " " + xhr.statusText);

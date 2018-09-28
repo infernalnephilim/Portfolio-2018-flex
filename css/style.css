@@ -106,13 +106,17 @@ button {
   width: 100%;
   text-align: center; }
 
+.btn-dark {
+  border-color: #000000;
+  color: #000; }
+
 .nav-icon {
   height: 60px;
   width: 60px;
   position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 4;
+  z-index: 10001;
   cursor: pointer;
   padding: 20px 10px; }
   @media screen and (min-width: 1300px) {
@@ -121,6 +125,8 @@ button {
       left: 50px; } }
   .nav-icon:hover .nav-icon__line {
     background: #F1C40F; }
+  .nav-icon:active .nav-icon__line {
+    background: #c31432; }
   .nav-icon__line {
     display: block;
     height: 4px;
@@ -176,7 +182,7 @@ button {
   left: 0;
   height: 100vh;
   width: 100%;
-  z-index: 2;
+  z-index: 10000;
   color: #ffffff;
   opacity: 0;
   -webkit-transition: all ease 0.5s;
@@ -405,12 +411,18 @@ button {
     -ms-transform: translateY(0) rotate(-45deg);
     -o-transform: translateY(0) rotate(-45deg);
     transform: translateY(0) rotate(-45deg); }
-  100% {
+  50% {
     -webkit-transform: translateY(5px) rotate(-45deg);
     -moz-transform: translateY(5px) rotate(-45deg);
     -ms-transform: translateY(5px) rotate(-45deg);
     -o-transform: translateY(5px) rotate(-45deg);
-    transform: translateY(5px) rotate(-45deg); } }
+    transform: translateY(5px) rotate(-45deg); }
+  100% {
+    -webkit-transform: translateY(0) rotate(-45deg);
+    -moz-transform: translateY(0) rotate(-45deg);
+    -ms-transform: translateY(0) rotate(-45deg);
+    -o-transform: translateY(0) rotate(-45deg);
+    transform: translateY(0) rotate(-45deg); } }
 @keyframes clipMe {
   0%, 100% {
     -webkit-clip-path: polygon(0px 0px, 60px 0px, 60px 60px, 0px 60px);
@@ -429,6 +441,9 @@ button {
   margin-bottom: 50px; }
 
 .skills-section {
+  background: #F6F6F6; }
+
+.cooperation-section {
   background: #F6F6F6; }
 
 .contact-section {
