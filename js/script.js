@@ -5,6 +5,12 @@ $(function () {
             $("#error").html(msg + xhr.status + " " + xhr.statusText);
         }
     });
+    $("#s1-b-text").load("what-can-i-do-for-you/what-can-i-do-for-you.html", function (response, status, xhr) {
+        if (status == "error") {
+            var msg = "Wystąpił błąd podczas ładowania strony: ";
+            $("#error").html(msg + xhr.status + " " + xhr.statusText);
+        }
+    });
     $("#s2-text").load("../skills/skills.html", function (response, status, xhr) {
         if (status == "error") {
             var msg = "Wystąpił błąd podczas ładowania strony: ";
