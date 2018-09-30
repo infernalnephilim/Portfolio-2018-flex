@@ -2,37 +2,44 @@
 
 $img-translation-value: 30px;
 
-
 .cooperation {
   //display: flex;
   &__item {
     position: relative;
     margin: 5px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
+    @media #{$media-desktop} {
+      margin-bottom: 150px;
+    }
   }
   &__img {
     width: 80%;
     margin-bottom: 0px;
     z-index: 1;
-    &--left{
+    &--left {
       margin-right: 20%;
     }
-    &--right{
+    &--right {
       margin-left: 20%;
     }
   }
   &__text {
-    position: absolute;
+    display: inline-flex;
+    position: relative;
     width: 500px;
     max-width: 100%;
-    margin-top: -15%;
-    z-index: 20;
+    bottom: 80px;
+    z-index: 5;
     border: 4px solid $decoration-color;
-
-    &--left{
+    @media #{$media-desktop} {
+      position: absolute;
+      //margin-top: -15%;
+      bottom: -5%;
+    }
+    &--left {
       left: 0;
       margin-left: $img-translation-value;
-      .cooperation__description{
+      .cooperation__description {
         -webkit-transform: translate(-$img-translation-value, $img-translation-value);
         -moz-transform: translate(-$img-translation-value, $img-translation-value);
         -ms-transform: translate(-$img-translation-value, $img-translation-value);
@@ -41,10 +48,14 @@ $img-translation-value: 30px;
       }
 
     }
-    &--right{
-      right: 0;
+    &--right {
+      margin-left: auto;
+      left: calc(100% - 530px);
       margin-right: $img-translation-value;
-      .cooperation__description{
+      @media #{$media-desktop} {
+        right: 0;
+      }
+      .cooperation__description {
         -webkit-transform: translate($img-translation-value, $img-translation-value);
         -moz-transform: translate($img-translation-value, $img-translation-value);
         -ms-transform: translate($img-translation-value, $img-translation-value);
@@ -56,12 +67,18 @@ $img-translation-value: 30px;
       margin-top: 0;
       font-size: 1.5rem;
     }
+    p {
+      text-align: justify;
+    }
   }
-  &__description{
-    padding: 50px;
+  &__description {
+    padding: 20px;
     width: 100%;
     height: 100%;
     background: #fff;
+    @media #{$media-desktop} {
+      padding: 50px;
+    }
 
   }
 }

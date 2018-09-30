@@ -320,8 +320,8 @@ button {
     width: 30px;
     height: 30px;
     margin-bottom: 40px;
-    border-bottom: solid #ffffff 6px;
-    border-left: solid #ffffff 6px;
+    border-bottom: solid #ffffff 4px;
+    border-left: solid #ffffff 4px;
     animation: move-arrow 1.5s infinite;
     cursor: pointer; }
     .main-header__arrow:after {
@@ -358,7 +358,7 @@ button {
       bottom: 0;
       left: 0;
       right: 0;
-      margin: -2%;
+      margin: -20px;
       box-shadow: inset 0 0 0 4px #c31432; }
     .main-header__title::after {
       -webkit-clip-path: polygon(0px 0px, 60px 0px, 60px 60px, 0px 60px);
