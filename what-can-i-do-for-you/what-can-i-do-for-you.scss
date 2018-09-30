@@ -7,7 +7,7 @@ $img-translation-value: 30px;
   &__item {
     position: relative;
     margin: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     @media #{$media-desktop} {
       margin-bottom: 150px;
     }
@@ -28,7 +28,7 @@ $img-translation-value: 30px;
     position: relative;
     width: 500px;
     max-width: 100%;
-    bottom: 80px;
+    bottom: 100px;
     z-index: 5;
     border: 4px solid $decoration-color;
     @media #{$media-desktop} {
@@ -54,6 +54,9 @@ $img-translation-value: 30px;
       margin-right: $img-translation-value;
       @media #{$media-desktop} {
         right: 0;
+      }
+      @media screen and (max-width : 530px) {
+        left: -$img-translation-value;
       }
       .cooperation__description {
         -webkit-transform: translate($img-translation-value, $img-translation-value);
