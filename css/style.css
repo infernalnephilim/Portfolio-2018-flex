@@ -1,3 +1,17 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(5%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes fadeInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -42,7 +56,7 @@ img {
   max-width: 100%; }
 
 h1, h3 {
-  font-family: "Parisienne", sans-serif;
+  font-family: 'Poiret One', cursive;
   font-weight: lighter; }
 
 h3 {
@@ -225,10 +239,11 @@ button {
       .navbar .navbar-nav {
         flex-direction: row; } }
     .navbar .navbar-nav .nav-item {
-      padding: 10px;
+      padding: 10px 0px;
       margin: 10px;
       font-size: 1.5em;
       opacity: 0;
+      position: relative;
       -webkit-transition: all ease 1.8s;
       -moz-transition: all ease 1.8s;
       -ms-transition: all ease 1.8s;
@@ -236,8 +251,8 @@ button {
       transition: all ease 1.8s; }
       @media screen and (min-width: 1300px) {
         .navbar .navbar-nav .nav-item {
-          padding: 20px;
-          margin: 20px;
+          padding: 10px 0px;
+          margin: 30px;
           font-size: 2em; } }
       .navbar .navbar-nav .nav-item .active {
         color: #F1C40F; }
@@ -245,9 +260,13 @@ button {
         display: block;
         content: '';
         margin-top: 5px;
-        border-top: solid 4px #F1C40F;
-        transform: scaleX(0);
-        transition: transform 250ms ease-in-out; }
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #F1C40F;
+        transition: 0.4s; }
       .navbar .navbar-nav .nav-item .nav-link {
         -webkit-transition: all ease 0.3s;
         -moz-transition: all ease 0.3s;
@@ -257,7 +276,7 @@ button {
       .navbar .navbar-nav .nav-item:hover .nav-link {
         color: #ffffff; }
       .navbar .navbar-nav .nav-item:hover:after {
-        transform: scaleX(1); }
+        width: 100%; }
   .navbar.opened .navbar-nav .nav-item {
     opacity: 1; }
     .navbar.opened .navbar-nav .nav-item:nth-child(1) {
@@ -358,11 +377,39 @@ button {
       @media screen and (min-width: 1300px) {
         .main-header__title h1 {
           font-size: 6em; } }
+    .main-header__title .typewriter {
+      width: auto; }
+      .main-header__title .typewriter p {
+        float: right;
+        overflow: hidden;
+        /* Ensures the content is not revealed until the animation */
+        border-right: 0.15em solid #F1C40F;
+        /* The typwriter cursor */
+        white-space: nowrap;
+        /* Keeps the content on a single line */
+        margin: 0 auto;
+        /* Gives that scrolling effect as the typing happens */
+        margin-top: 10px;
+        letter-spacing: .15em;
+        /* Adjust as needed */
+        animation: typing 6.5s steps(60, end), blink-caret 0.75s step-end infinite; }
     .main-header__title p {
+      width: auto;
       color: rgba(255, 255, 255, 0.2);
-      margin-top: 10px;
       text-align: right; }
 
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: #F1C40F; } }
 .technologies {
   color: grey;
   font-size: .8em; }
@@ -377,20 +424,6 @@ button {
     transform: translateX(10%); }
   100% {
     transform: translateX(0); } }
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(5%); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
-@keyframes fadeInFromTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-20%); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
 @keyframes move-arrow-2 {
   0% {
     -webkit-transform: translateY(0) rotate(0);

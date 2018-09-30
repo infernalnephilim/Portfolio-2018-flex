@@ -1,8 +1,67 @@
-.cooperation{
-  display: flex;
-  &__item{
-    padding: 10px;
+@import '../variables';
+
+$img-translation-value: 30px;
+
+
+.cooperation {
+  //display: flex;
+  &__item {
+    position: relative;
     margin: 5px;
+    margin-bottom: 150px;
+  }
+  &__img {
+    width: 80%;
+    margin-bottom: 0px;
+    z-index: 1;
+    &--left{
+      margin-right: 20%;
+    }
+    &--right{
+      margin-left: 20%;
+    }
+  }
+  &__text {
+    position: absolute;
+    width: 500px;
+    max-width: 100%;
+    margin-top: -15%;
+    z-index: 20;
+    border: 4px solid $decoration-color;
+
+    &--left{
+      left: 0;
+      margin-left: $img-translation-value;
+      .cooperation__description{
+        -webkit-transform: translate(-$img-translation-value, $img-translation-value);
+        -moz-transform: translate(-$img-translation-value, $img-translation-value);
+        -ms-transform: translate(-$img-translation-value, $img-translation-value);
+        -o-transform: translate(-$img-translation-value, $img-translation-value);
+        transform: translate(-$img-translation-value, $img-translation-value);
+      }
+
+    }
+    &--right{
+      right: 0;
+      margin-right: $img-translation-value;
+      .cooperation__description{
+        -webkit-transform: translate($img-translation-value, $img-translation-value);
+        -moz-transform: translate($img-translation-value, $img-translation-value);
+        -ms-transform: translate($img-translation-value, $img-translation-value);
+        -o-transform: translate($img-translation-value, $img-translation-value);
+        transform: translate($img-translation-value, $img-translation-value);
+      }
+    }
+    h4 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+  }
+  &__description{
+    padding: 50px;
+    width: 100%;
+    height: 100%;
     background: #fff;
+
   }
 }
