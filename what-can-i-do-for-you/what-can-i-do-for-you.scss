@@ -2,7 +2,7 @@
 
 $img-translation-value: 30px;
 
-.cooperation {
+.offer {
   //display: flex;
   &__item {
     position: relative;
@@ -39,7 +39,7 @@ $img-translation-value: 30px;
     &--left {
       left: 0;
       margin-left: $img-translation-value;
-      .cooperation__description {
+      .offer__description {
         -webkit-transform: translate(-$img-translation-value, $img-translation-value);
         -moz-transform: translate(-$img-translation-value, $img-translation-value);
         -ms-transform: translate(-$img-translation-value, $img-translation-value);
@@ -58,7 +58,7 @@ $img-translation-value: 30px;
       @media screen and (max-width : 530px) {
         left: -$img-translation-value;
       }
-      .cooperation__description {
+      .offer__description {
         -webkit-transform: translate($img-translation-value, $img-translation-value);
         -moz-transform: translate($img-translation-value, $img-translation-value);
         -ms-transform: translate($img-translation-value, $img-translation-value);
