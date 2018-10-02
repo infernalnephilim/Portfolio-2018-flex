@@ -26,7 +26,8 @@
       align-items: flex-start;
       justify-content: center; } }
   .contact-section__content__details {
-    width: 100%; }
+    width: 100%;
+    margin: 10px; }
     .contact-section__content__details i {
       margin-right: 5px; }
     @media screen and (min-width: 1000px) {
@@ -36,7 +37,8 @@
         .contact-section__content__details h3 {
           text-align: left; } }
   .contact-section__content__form {
-    width: 100%; }
+    width: 100%;
+    margin: 10px; }
     @media screen and (min-width: 1000px) {
       .contact-section__content__form {
         flex: 2; }

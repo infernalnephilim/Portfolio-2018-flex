@@ -42,6 +42,40 @@ $media-desktop: "screen and (min-width : 1300px)";
   transition: all ease $time;
 }
 
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+
+@mixin translateAndRotate($transform, $rotate) {
+  -webkit-transform: translateY($transform) rotate($rotate);
+  -moz-transform: translateY($transform) rotate($rotate);
+  -ms-transform: translateY($transform) rotate($rotate);
+  -o-transform: translateY($transform) rotate($rotate);
+  transform: translateY($transform) rotate($rotate);
+}
+
+@mixin borderLeftToRightGradient($color1, $color2) {
+
+  -webkit-border-image: -webkit-gradient(linear, 100% 0, 0 0, from($color1), to($color2)) 1 100%;
+  -webkit-border-image: -webkit-linear-gradient(right, $color1, $color2) 1 100%;
+  -moz-border-image: -moz-linear-gradient(right, $color1, $color2) 1 100%;
+  -o-border-image: -o-linear-gradient(right, $color1, $color2) 1 100%;
+  border-image: linear-gradient(to right, $color1, $color2) 1 100%;
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+
 
 @keyframes fadeIn {
   0% {
