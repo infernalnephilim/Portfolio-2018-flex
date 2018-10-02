@@ -142,7 +142,7 @@ $img-translation-value: 30px;
           //  clip-path: polygon(calc(100% - 60px) calc(100% - 60px), 100% calc(100% - 60px), 100% 100%, calc(100% - 60px) 100%);
           //}
         }
-        .text{
+        .text {
 
           padding: 30px;
           background: $grey;
@@ -150,7 +150,7 @@ $img-translation-value: 30px;
           @media #{$media-desktop} {
             width: auto;
             padding: 50px;
-            @include translate($img-translation-value,-$img-translation-value);
+            @include translate($img-translation-value, -$img-translation-value);
           }
         }
         h5 {
@@ -189,7 +189,7 @@ $img-translation-value: 30px;
   @media #{$media-desktop} {
     flex-direction: row;
   }
-  &__column{
+  &__column {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -203,6 +203,7 @@ $img-translation-value: 30px;
     width: 100%;
     max-width: 100%;
     border: solid 10px transparent;
+    overflow: hidden;
     &::before {
       content: '';
       border: 1px solid #f9f9f9;
@@ -214,6 +215,15 @@ $img-translation-value: 30px;
       left: 0;
       z-index: -1;
     }
+    &:hover {
+      img {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+    }
     @media #{$media-desktop} {
       width: 100%;
       max-width: 100%;
@@ -222,6 +232,7 @@ $img-translation-value: 30px;
       width: 100%;
       max-width: 100%;
       padding: 1px;
+      @include transition-ease(1.5s);
     }
     &__text {
       display: flex;
@@ -277,7 +288,8 @@ $img-translation-value: 30px;
   h1 {
     font-size: 4em;
     font-family: $default-font-family;
-    text-transform: uppercase;
+    //text-transform: uppercase;
+    margin-bottom: 5px;
   }
   a {
     margin: 5px;
@@ -285,13 +297,26 @@ $img-translation-value: 30px;
   button {
     min-width: 100px;
   }
+  .year{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 3em;
+    color: #111111;
+    font-weight: bold;
+  }
   &__logo {
     align-self: flex-end;
-    font-family: $headers-font-family;
     //background: $decoration-color;
-    padding: 20px;
+
     text-align: right;
-    font-size: 2em;
+
+    @media #{$media-desktop} {
+      font-size: 2em;
+      padding: 20px;
+    }
+    a{
+      font-family: $headers-font-family;
+    }
   }
   .container {
     flex-direction: column;
