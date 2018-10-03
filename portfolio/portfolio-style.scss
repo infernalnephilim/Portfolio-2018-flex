@@ -81,15 +81,29 @@ $img-translation-value: 30px;
         height: 100%;
         &.dermina-bg {
           //background: url("../img/dermina_featured.jpg");
-          background: url("../img/dermina_featured.jpg");
-          background-position: 50% 30%;
+          background: url("../img/dermina_featured3.jpg");
+          background-position: 50% 20%;
           background-repeat: no-repeat;
           -webkit-background-size: cover;
           background-size: cover;
         }
         &.jinglex-bg {
-          background: url("../img/jinglex_featured.jpg");
-          background-position: 50% 30%;
+          background: url("../img/jinglex_featured3.jpg");
+          background-position: 50% 15%;
+          background-repeat: no-repeat;
+          -webkit-background-size: cover;
+          background-size: cover;
+        }
+        &.pixi-bg {
+          background: url("../img/pixijs_featured3.jpg");
+          background-position: 50% 45%;
+          background-repeat: no-repeat;
+          -webkit-background-size: cover;
+          background-size: cover;
+        }
+        &.portfolio-bg {
+          background: url("../img/portfolio_featured.jpg");
+          background-position: 50% 45%;
           background-repeat: no-repeat;
           -webkit-background-size: cover;
           background-size: cover;
@@ -189,6 +203,10 @@ $img-translation-value: 30px;
   @media #{$media-desktop} {
     flex-direction: row;
   }
+&__all{
+  padding: 5px;
+  text-align: center;
+}
   &__column {
     width: 100%;
     display: flex;

@@ -1,1 +1,1 @@
-const slide = new ImageSlider('.carousel__content','.nav-left','.nav-right');
+const slide = new ImageSlider('.carousel__content', '.nav-left', '.nav-right');

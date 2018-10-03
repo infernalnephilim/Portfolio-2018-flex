@@ -26,22 +26,10 @@
     height: 100%;
     position: absolute;
     background: #fff;
-    &--a {
-      transform: rotateY(0deg) translateZ(1700px);
-    }
-    &--b {
-      transform: rotateY(90deg) translateZ(1700px);
-    }
-    &--c {
-      transform: rotateY(180deg) translateZ(1700px);
-    }
-    &--d {
-      transform: rotateY(270deg) translateZ(1700px);
-    }
-    //@for $i from 1 through 4 {
-    //  &:nth-child(#{$i}) {
-    //    transform: rotateY((0 + $i * 90)deg) translateZ(2000px);
-    //  }
-    //}
   }
+}
+
+.disabled-ctrl{
+  display: none;
+
 }

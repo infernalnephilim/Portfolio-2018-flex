@@ -19,7 +19,7 @@ $img-translation-value: 30px;
     padding: 10px;
     margin-right: $img-translation-value;
     margin-bottom: $img-translation-value;
-    max-width: 500px;
+    max-width: 600px;
 
     img {
       //max-width: 400px;
@@ -45,9 +45,13 @@ $img-translation-value: 30px;
     &__description {
       //border: px $grey solid;
       @media #{$media-desktop} {
-        font-size: 1.2em;
+        font-size: 1.1em;
+        line-height: 1.5em;
       }
     }
+  }
+  &__more{
+    text-align: center;
   }
 
 }

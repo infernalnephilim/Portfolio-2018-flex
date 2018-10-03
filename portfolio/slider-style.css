@@ -37,13 +37,8 @@
     height: 100%;
     position: absolute;
     background: #fff; }
-    .carousel__item--a {
-      transform: rotateY(0deg) translateZ(1700px); }
-    .carousel__item--b {
-      transform: rotateY(90deg) translateZ(1700px); }
-    .carousel__item--c {
-      transform: rotateY(180deg) translateZ(1700px); }
-    .carousel__item--d {
-      transform: rotateY(270deg) translateZ(1700px); }
+
+.disabled-ctrl {
+  display: none; }
 
 /*# sourceMappingURL=slider-style.css.map */

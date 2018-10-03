@@ -27,7 +27,7 @@
     padding: 10px;
     margin-right: 30px;
     margin-bottom: 30px;
-    max-width: 500px; }
+    max-width: 600px; }
     .about-me__picture img {
       width: 100%;
       -webkit-transform: translate(30px, 30px);
@@ -45,6 +45,9 @@
       margin-top: 10px; }
     @media screen and (min-width: 1300px) {
       .about-me__text__description {
-        font-size: 1.2em; } }
+        font-size: 1.1em;
+        line-height: 1.5em; } }
+  .about-me__more {
+    text-align: center; }
 
 /*# sourceMappingURL=about-me-section-style.css.map */
