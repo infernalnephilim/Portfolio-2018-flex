@@ -44,17 +44,21 @@ $(function () {
     //$(".nav-item:nth-child(1)").addClass("active");
 
     $('a[href^="#"]').click(function () {
-        console.log("Smooth");
         const the_id = $(this).attr("href");
-        console.log(the_id);
 
         $('html, body').animate({
             scrollTop: $(the_id).offset().top
         }, 'slow');
 
-        toggleNavbar();
-
+        if (this.hasClass("nav-link")) {
+            toggleNavbar();
+        }
         return false;
+    });
+    $(".main-header__arrow").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#about-me").offset().top
+        }, 'slow');
     });
 });
 
@@ -107,6 +111,7 @@ function toggleNavbar() {
     // $(".nav-icon__line__left").addClass("up-bar-change");
     $(".nav-icon__line__right").toggleClass("nav-icon-active");
 }
+
 function getViewportHeight() {
     var a = document.documentElement.clientHeight, b = window.innerHeight;
     return a < b ? b : a;

@@ -46,15 +46,17 @@ $grey: #F6F6F6;
 }
 
 .contact-section {
+  width: 100%;
   h2{
     color: #0b0b0b;
   }
-  &__content {
+  .content {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: $mobile-margin;
     @media #{$media-desktop} {
       flex-direction: row;
       align-items: flex-start;
@@ -113,6 +115,7 @@ $grey: #F6F6F6;
     }
 
     .form-row {
+      width: 100%;
       display: flex;
       flex-direction: column;
       margin-bottom: 20px;
