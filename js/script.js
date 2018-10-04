@@ -50,9 +50,7 @@ $(function () {
             scrollTop: $(the_id).offset().top
         }, 'slow');
 
-        if (this.hasClass("nav-link")) {
-            toggleNavbar();
-        }
+        toggleNavbar();
         return false;
     });
     $(".main-header__arrow").click(function () {

@@ -23,11 +23,11 @@ class ImageSlider {
         console.log(this.slides);
 
         if (this.default.type === "cube") {
-            this.rotateAngle = 360/this.slidesLength;
+            this.rotateAngle = 360 / this.slidesLength;
             if (this.currentSlide === 0) {
                 $(this.prev).addClass("disabled-ctrl");
             }
-            for(let i = 0; i < this.slidesLength; i++){
+            for (let i = 0; i < this.slidesLength; i++) {
                 console.log(i);
                 $(this.slides[i]).css({
                     "-webkit-transform": "rotate(" + (i * this.rotateAngle) + ");",
@@ -43,7 +43,7 @@ class ImageSlider {
             if (this.currentSlide === 0) {
                 $(this.prev).addClass("disabled-ctrl");
             }
-            for(let i = 0; i < this.slidesLength; i++){
+            for (let i = 0; i < this.slidesLength; i++) {
                 console.log(i);
                 $(this.slides[i]).css({
                     "-webkit-transform": "translate(" + (i * 100) + "%, 0);",
@@ -54,6 +54,9 @@ class ImageSlider {
                 });
             }
         }
+        this.slider.addEventListener("swap", function (event) {
+            alert('Swaped ' + event.detail.direction + ' at ' + event.target.id);
+        }, false);
 
         $(this.prev).on("click", () => {
             console.log("klik prev");
