@@ -54,9 +54,7 @@ class ImageSlider {
                 });
             }
         }
-        this.slider.addEventListener("swap", function (event) {
-            alert('Swaped ' + event.detail.direction + ' at ' + event.target.id);
-        }, false);
+
 
         $(this.prev).on("click", () => {
             console.log("klik prev");
@@ -67,7 +65,9 @@ class ImageSlider {
                 this.slideNext()
             }
         );
-
+        this.slider.addEventListener("swap", function (event) {
+            alert('Swaped ' + event.detail.direction + ' at ' + event.target.id);
+        }, false);
     }
 
     slidePrev() {
