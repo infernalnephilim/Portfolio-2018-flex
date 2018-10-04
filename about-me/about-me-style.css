@@ -36,8 +36,8 @@
   .about-me-header__title {
     max-width: 100%;
     position: absolute;
-    padding: 30px 70px;
-    margin: 30px;
+    padding: 10px 40px;
+    margin: 10px;
     border: 1px solid #ffffff;
     background: rgba(0, 0, 0, 0.6);
     animation: 1s ease-out 0s 1 fadeIn; }

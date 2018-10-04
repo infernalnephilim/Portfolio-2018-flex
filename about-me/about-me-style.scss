@@ -26,11 +26,11 @@
   }
   &__title {
     $padding: 40px 90px;
-    $padding-mobile: 30px 70px;
+    $padding-mobile: 10px 40px;
     max-width: 100%;
     position: absolute;
     padding: $padding-mobile;
-    margin: 30px;
+    margin: $mobile-margin;
     border: 1px solid $white;
 
     background: rgba(0, 0, 0, 0.6);
