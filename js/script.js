@@ -61,7 +61,7 @@ $(function () {
 });
 
 $(document).ready(function () {
-    $(".navbar-nav .nav-item:nth-child(1) .nav-link").addClass("active");
+    // $(".navbar-nav .nav-item:nth-child(1) .nav-link").addClass("active");
     $(".navbar-nav .nav-item .nav-link").on("click", function () {
         $(".navbar-nav .nav-item .nav-link").removeClass("active");
         $(this).addClass("active");
@@ -93,7 +93,7 @@ $(document).ready(function () {
                 continue;
             }
 
-            el.style.backgroundPosition = '50% ' + Math.round((elOffset - offset) * 3 / 8) + 'px';
+            el.style.backgroundPosition = '50% ' + Math.round((elOffset - offset) * 3 / 8 - 100) + 'px';
         }
     }
 

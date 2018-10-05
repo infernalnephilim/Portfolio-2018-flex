@@ -296,18 +296,16 @@ $img-translation-value: 30px;
   }
 }
 
-.portfolio-header {
+.subpage-main {
   flex-direction: column;
-  padding: 40px 40px 60px 40px;
-  img {
-    padding: 10px;
-    width: 100%;
+  padding: 20px $mobile-margin;
+  @media #{$media-desktop} {
+    padding: 100px $mobile-margin;
   }
-  h1 {
-    font-size: 4em;
-    font-family: $default-font-family;
-    //text-transform: uppercase;
-    margin-bottom: 5px;
+  img {
+    padding: $mobile-margin;
+    width: 100%;
+    margin-bottom: 50px;
   }
   a {
     margin: 5px;
@@ -318,25 +316,42 @@ $img-translation-value: 30px;
   .year{
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 3em;
-    color: #111111;
+    font-size: 1.5em;
+    color: #c8c8c8;
     font-weight: bold;
-  }
-  &__logo {
-    align-self: flex-end;
-    //background: $decoration-color;
-
-    text-align: right;
-
     @media #{$media-desktop} {
-      font-size: 2em;
-      padding: 20px;
+      font-size: 3em;
     }
-    a{
-      font-family: $headers-font-family;
-    }
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    //min-height: 50vh;
+
+  }
+  &__buttons {
+    margin: 40px $mobile-margin;
+  }
+  &__arrow{
+    font-size: 3em;
+    //align-self: flex-end;
+    justify-self: flex-end;
+    padding: 20px $mobile-margin;
   }
   .container {
     flex-direction: column;
+  }
+
+}
+
+.design{
+  background: $grey;
+  .section-content{
+    padding: $mobile-margin;
+    img{
+      margin-bottom: $mobile-margin;
+    }
   }
 }

@@ -65,9 +65,9 @@ class ImageSlider {
                 this.slideNext()
             }
         );
-        this.slider.addEventListener("swap", function (event) {
-            alert('Swaped ' + event.detail.direction + ' at ' + event.target.id);
-        }, false);
+        // this.slider.addEventListener("swap", function (event) {
+        //     alert('Swaped ' + event.detail.direction + ' at ' + event.target.id);
+        // }, false);
     }
 
     slidePrev() {

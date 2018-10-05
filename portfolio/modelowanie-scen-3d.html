@@ -28,14 +28,13 @@
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
           integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="preloader/loader-style.css" type="text/css">
-    <link rel="stylesheet" href="about-me/about-me-section-style.css" type="text/css">
-    <link rel="stylesheet" href="contact/contact-style.css" type="text/css">
-    <link rel="stylesheet" href="skills/skills-style.css" type="text/css">
-    <link rel="stylesheet" href="portfolio/slider-style.css" type="text/css">
-    <link rel="stylesheet" href="portfolio/portfolio-style.css" type="text/css">
-    <link rel="stylesheet" href="what-can-i-do-for-you/what-can-i-do-for-you.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="../preloader/loader-style.css" type="text/css">
+    <link rel="stylesheet" href="../about-me/about-me-section-style.css" type="text/css">
+    <link rel="stylesheet" href="../contact/contact-style.css" type="text/css">
+    <link rel="stylesheet" href="../skills/skills-style.css" type="text/css">
+    <link rel="stylesheet" href="../portfolio/slider-style.css" type="text/css">
+    <link rel="stylesheet" href="../portfolio/portfolio-style.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
 </head>
 <body>
 <div id="top"></div>
@@ -50,91 +49,73 @@
     <div class="nav-content navbar-collapse">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" href="#top">Home </a>
+                <a class="nav-link" href="aleksandra.poltorak.pl/#top">Home </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#about-me">O&nbsp;mnie</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="#what-can-i-do-for-you">Oferta</a>
+                <a class="nav-link" href="aleksandra.poltorak.pl/#o-mnie">O&nbsp;mnie</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#portfolio">Portfolio</a>
+                <a class="nav-link" href="aleksandra.poltorak.pl/#umiejetnosci">Umiejętności</a>
+            </li>
+            <!--<li class="nav-item active">-->
+            <!--<a class="nav-link" href="#edukacja">Edukacja</a>-->
+            <!--</li>-->
+            <li class="nav-item">
+                <a class="nav-link active" href="aleksandra.poltorak.pl/#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#contact">Kontakt</a>
+                <a class="nav-link" href="aleksandra.poltorak.pl/#kontakt">Kontakt</a>
             </li>
         </ul>
     </div>
 </nav>
-
-<header class="main-header js-parallax-bg">
-    <div class="main-header__title">
+<header class="header subpage-header subpage-header--pixijs js-parallax-bg">
+    <div class="subpage-header__title">
         <!--<h3>Cześć, jestem</h3>-->
-        <h1 class="">Aleksandra Półtorak</h1>
-
-        <div class="typewriter">
-            <!--<p class="">Programista &bull; Grafik &bull; Webmaster</p>-->
-            <p class="">Freelancer </p>
-        </div>
+        <h1 class="">Modelowanie scen 3D z wykorzystaniem pixi.js</h1>
+        <p class="">Aplikacja</p>
+        <!--<p class="">Freelancer</p>-->
     </div>
-    <div class="main-header__arrow"></div>
 </header>
-
-<section id="about-me" class="about-me-section">
-    <div id="s1"></div>
-    <div class="section-header">
-        <h2 class="section-header__title">O&nbsp;mnie</h2>
-        <!--<p class="section-header__subtitle">Kilka słów o mnie</p>-->
-    </div>
+<section class="subpage-main">
     <div class="container">
-        <div id="s1-text" class="section-content"></div>
+        <div class="section-header">
+            <h2 class="section-header__title">Informacje</h2>
+            <h3 class="section-header__title">Praca licencjacka pt. "Modelowanie scen 3D z wykorzystaniem pixi.js"</h3>
+            <div class="subpage-main__info">
+                <p class="year">2016</p>
+                <p class="technologies">
+                    HTML • CSS • JavaScript • PixiJS • Three.js
+                </p>
+
+                <div class="subpage-main__buttons">
+                    <a href="http://pixijs.esy.es" target="_blank">
+                        <button class="btn-dark">Podgląd</button>
+                    </a>
+                    <a href="" target="_blank">
+                        <button class="btn-dark">Kod</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="section-content">
+            <img src="../img/pixijs_portfolio.png">
+        </div>
+
     </div>
 </section>
-<section id="what-can-i-do-for-you" class="offer-section">
-    <div id="s1-b"></div>
+<section class="design">
     <div class="section-header">
-        <h2 class="section-header__title">Oferta</h2>
-        <h3 class="section-header__title">Co mogę dla Ciebie zrobić?</h3>
-        <!--<p class="section-header__subtitle">Pracuję z technologiami...</p>-->
+        <h2 class="section-header__title">Design</h2>
+        <h3 class="section-header__title">Jak wygląda strona?</h3>
     </div>
     <div class="container">
-        <div id="s1-b-text" class="section-content"></div>
-    </div>
-</section>
-
-
-<section id="portfolio" class="portfolio-section">
-    <div id="s4"></div>
-    <div class="section-header">
-        <h2 class="section-header__title">Portfolio</h2>
-        <h3 class="section-header__title">Moje projekty</h3>
-        <!--<p class="section-header__subtitle">Trochę o moich projektach</p>-->
-    </div>
-    <!--<div class="container-full">-->
-    <div id="s4-text" class="section-content"></div>
-    <!--</div>-->
-</section>
-<!--<section id="skills" class="skills-section">-->
-<!--<div id="s2"></div>-->
-<!--<div class="section-header">-->
-<!--<h2 class="section-header__title">Umiejętności</h2>-->
-<!--<h3 class="section-header__title">Co potrafię?</h3>-->
-<!--<p class="section-header__subtitle">Pracuję z technologiami...</p>-->
-<!--</div>-->
-<!--<div class="container">-->
-<!--<div id="s2-text" class="section-content"></div>-->
-<!--</div>-->
-<!--</section>-->
-<section id="contact" class="contact-section">
-    <div id="s5"></div>
-    <div class="section-header">
-        <h2 class="section-header__title">Kontakt</h2>
-        <!--<p class="section-header__subtitle">Skontaktuj się ze mną</p>-->
-    </div>
-    <div class="container">
-        <div id="s5-text" class="section-content"></div>
+        <div class="section-content">
+            <img src="../img/jinglex4.jpg">
+            <img src="../img/dermina2.jpg">
+            <img src="../img/dermina3.jpg">
+            <img src="../img/dermina4.jpg">
+        </div>
     </div>
 </section>
 <footer>
@@ -153,13 +134,9 @@
         &copy; Aleksandra Półtorak
     </div>
 </footer>
-
-<script src="js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.9/jquery.transit.min.js"></script>
-<script src="js/gator.min.js"></script>
-<!--<script src="skills/skills.js"></script>-->
-<!--<script src="portfolio/portfolio.js"></script>-->
-<!--<script src="validation.js"></script>-->
-<script src="js/script.js"></script>
+<script src="../js/gator.min.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>

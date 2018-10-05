@@ -240,36 +240,48 @@
           .other-projects .item__text p {
             margin: 20px 0; } }
 
-.portfolio-header {
+.subpage-main {
   flex-direction: column;
-  padding: 40px 40px 60px 40px; }
-  .portfolio-header img {
+  padding: 20px 10px; }
+  @media screen and (min-width: 1300px) {
+    .subpage-main {
+      padding: 100px 10px; } }
+  .subpage-main img {
     padding: 10px;
-    width: 100%; }
-  .portfolio-header h1 {
-    font-size: 4em;
-    font-family: "Montserrat", sans-serif;
-    margin-bottom: 5px; }
-  .portfolio-header a {
+    width: 100%;
+    margin-bottom: 50px; }
+  .subpage-main a {
     margin: 5px; }
-  .portfolio-header button {
+  .subpage-main button {
     min-width: 100px; }
-  .portfolio-header .year {
+  .subpage-main .year {
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 3em;
-    color: #111111;
+    font-size: 1.5em;
+    color: #c8c8c8;
     font-weight: bold; }
-  .portfolio-header__logo {
-    align-self: flex-end;
-    text-align: right; }
     @media screen and (min-width: 1300px) {
-      .portfolio-header__logo {
-        font-size: 2em;
-        padding: 20px; } }
-    .portfolio-header__logo a {
-      font-family: "Poiret One", cursive; }
-  .portfolio-header .container {
+      .subpage-main .year {
+        font-size: 3em; } }
+  .subpage-main__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center; }
+  .subpage-main__buttons {
+    margin: 40px 10px; }
+  .subpage-main__arrow {
+    font-size: 3em;
+    justify-self: flex-end;
+    padding: 20px 10px; }
+  .subpage-main .container {
     flex-direction: column; }
+
+.design {
+  background: #F6F6F6; }
+  .design .section-content {
+    padding: 10px; }
+    .design .section-content img {
+      margin-bottom: 10px; }
 
 /*# sourceMappingURL=portfolio-style.css.map */
