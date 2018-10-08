@@ -171,8 +171,9 @@
     position: relative;
     width: 100%;
     max-width: 100%;
-    border: solid 10px transparent;
-    overflow: hidden; }
+    border: solid 10px #ffffff;
+    overflow: hidden;
+    min-height: 400px; }
     .other-projects .item::before {
       content: '';
       border: 1px solid #f9f9f9;
@@ -183,25 +184,32 @@
       top: 0;
       left: 0;
       z-index: -1; }
-    .other-projects .item:hover img {
-      -webkit-transform: scale(1.1);
-      -moz-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      -o-transform: scale(1.1);
-      transform: scale(1.1); }
     @media screen and (min-width: 1300px) {
       .other-projects .item {
         width: 100%;
         max-width: 100%; } }
-    .other-projects .item__img {
-      width: 100%;
-      max-width: 100%;
-      padding: 1px;
-      -webkit-transition: all ease 1.5s;
-      -moz-transition: all ease 1.5s;
-      -ms-transition: all ease 1.5s;
-      -o-transition: all ease 1.5s;
-      transition: all ease 1.5s; }
+    .other-projects .item--portfolio {
+      background: url("../img/portfolio_nowe_featured.jpg") no-repeat 60% 50%;
+      -webkit-background-size: cover;
+      background-size: cover; }
+      @media screen and (min-width: 1300px) {
+        .other-projects .item--portfolio {
+          min-height: 600px; } }
+    .other-projects .item--jinglex2017 {
+      background: url("../img/jinglex_old_featured.jpg") no-repeat 80% 50%;
+      -webkit-background-size: cover;
+      background-size: cover; }
+    .other-projects .item--preloader {
+      background: url("../img/preloader_featured.jpg") no-repeat 100% 50%;
+      -webkit-background-size: cover;
+      background-size: cover; }
+    .other-projects .item--shopping-list {
+      background: url("../img/lista-zakupow_featured.jpg") no-repeat 50% 50%;
+      -webkit-background-size: cover;
+      background-size: cover; }
+      @media screen and (min-width: 1300px) {
+        .other-projects .item--shopping-list {
+          min-height: 600px; } }
     .other-projects .item__text {
       display: flex;
       flex-direction: column;

@@ -1,7 +1,8 @@
 @import '../variables';
 
 .about-me-header {
-  background: url("../img/about_me_photo.jpg");
+  background: url("../img/about_me_photo.jpg") no-repeat 50% 0px;
+  background-size: cover;
 }
 
 .about-me-section {

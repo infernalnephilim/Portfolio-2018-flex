@@ -147,6 +147,8 @@ button {
 .section-header {
   width: 100%;
   text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 .btn-dark {
@@ -355,10 +357,10 @@ button {
   min-height: 100vh;
   width: 100%;
   background: $header-img;
-  -webkit-background-size: auto 130%;
-  background-size: auto 130%;
+  -webkit-background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% -100px;
+  background-position: 50% 0px;
   background-attachment: fixed;
   letter-spacing: 1px;
 
@@ -481,34 +483,50 @@ button {
   letter-spacing: 1px;
   &--dermina{
     background: url("../img/dermina_featured3.jpg");
-    -webkit-background-size: auto 130%;
-    background-size: auto 130%;
+    -webkit-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% -100px;
+    background-position: 50% 0px;
     background-attachment: fixed;
   }
   &--jinglex{
     background: url("../img/jinglex_featured3.jpg");
-    -webkit-background-size: auto 130%;
-    background-size: auto 130%;
+    -webkit-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% -100px;
+    background-position: 50% 0px;
     background-attachment: fixed;
   }
   &--pixijs{
     background: url("../img/pixijs_featured3.jpg");
-    -webkit-background-size: auto 130%;
-    background-size: auto 130%;
+    -webkit-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% -100px;
+    background-position: 50% 0px;
     background-attachment: fixed;
   }
   &--portfolio-bootstrap{
     background: url("../img/portfolio_featured.jpg");
-    -webkit-background-size: auto 130%;
-    background-size: auto 130%;
+    -webkit-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% -100px;
+    background-position: 50% 0px;
+    background-attachment: fixed;
+  }
+  &--portfolio-flex{
+    background: url("../img/portfolio_nowe_featured.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    background-attachment: fixed;
+  }
+  &--lista-zakupow{
+    background: url("../img/lista-zakupow_featured.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
     background-attachment: fixed;
   }
   @media #{$media-desktop} {
@@ -570,6 +588,13 @@ button {
       animation: 2s ease-out 0s 1 fadeInFromTop;
       @media #{$media-desktop} {
           font-size: 7em;
+      }
+    }
+    .subpage-title{
+      &--pixijs{
+        @media #{$media-desktop} {
+          font-size: 5em;
+        }
       }
     }
     p {
@@ -670,12 +695,6 @@ button {
     -webkit-clip-path: polygon(0px calc(100% - 60px), 60px calc(100% - 60px), 60px 100%, 0px 100%);
     clip-path: polygon(0px calc(100% - 60px), 60px calc(100% - 60px), 60px 100%, 0px 100%);
   }
-}
-
-
-.section-header {
-  margin-top: 100px;
-  margin-bottom: 50px;
 }
 
 .skills-section {

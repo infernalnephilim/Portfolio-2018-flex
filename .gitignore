@@ -39,3 +39,8 @@ Thumbs.db
 # Webstorm files #
 ######################
 .idea/*
+
+# Node modules #
+######################
+node_modules/
+
