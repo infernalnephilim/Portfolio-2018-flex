@@ -323,16 +323,22 @@ button {
   .main-header__arrow {
     align-self: center;
     position: absolute;
-    bottom: 0;
+    bottom: 5%;
     left: 50%;
-    margin-right: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     width: 30px;
     height: 30px;
     margin-bottom: 40px;
     border-bottom: solid #ffffff 4px;
     border-left: solid #ffffff 4px;
     animation: move-arrow 1.5s infinite;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 10; }
     .main-header__arrow:after {
       position: absolute;
       bottom: 0;
@@ -347,6 +353,16 @@ button {
       -moz-animation-delay: .3s;
       -o-animation-delay: .3s;
       animation-delay: .3s; }
+  .main-header__cover {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    z-index: 5; }
+    .main-header__cover--1 {
+      background: url("../img/header-cover2.png") no-repeat 50% -100%; }
+    .main-header__cover--2 {
+      background: url("../img/header-cover.png") no-repeat 50% calc(-100% - 50px); }
   .main-header__title {
     max-width: 100%;
     position: relative;
