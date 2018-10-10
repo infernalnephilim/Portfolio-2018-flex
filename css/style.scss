@@ -278,6 +278,9 @@ button {
     justify-content: center;
     list-style-type: none;
     padding: 5px;
+    @media screen and (orientation: landscape) {
+      flex-direction: row;
+    }
     @media #{$media-desktop} {
       flex-direction: row;
     }

@@ -41,6 +41,7 @@ $(function () {
     //         $("#error").html(msg + xhr.status + " " + xhr.statusText);
     //     }
     // });
+
     $('a[href^="#"]').click(function () {
         const the_id = $(this).attr("href");
 

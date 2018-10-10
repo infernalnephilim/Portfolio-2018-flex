@@ -238,6 +238,9 @@ button {
     justify-content: center;
     list-style-type: none;
     padding: 5px; }
+    @media screen and (orientation: landscape) {
+      .navbar .navbar-nav {
+        flex-direction: row; } }
     @media screen and (min-width: 1300px) {
       .navbar .navbar-nav {
         flex-direction: row; } }
