@@ -300,6 +300,7 @@ button {
   width: 100%; }
 
 .main-header {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   background: url("../img/apple-691282_1920.jpg");
@@ -308,10 +309,12 @@ button {
   background-repeat: no-repeat;
   background-position: 50% 0px;
   background-attachment: fixed;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  overflow-y: hidden; }
   @media screen and (min-width: 1300px) {
     .main-header {
-      justify-content: flex-start; } }
+      justify-content: flex-start;
+      min-height: 100vh; } }
   .main-header:before {
     content: '';
     position: absolute;
@@ -320,6 +323,9 @@ button {
     width: 30%;
     height: 100vh;
     background: #000; }
+    @media screen and (min-width: 1300px) {
+      .main-header:before {
+        height: 100vh; } }
   .main-header__arrow {
     align-self: center;
     position: absolute;

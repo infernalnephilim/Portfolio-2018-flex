@@ -357,6 +357,7 @@ button {
   width: 100%;
 }
 .main-header {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   background: $header-img;
@@ -366,9 +367,11 @@ button {
   background-position: 50% 0px;
   background-attachment: fixed;
   letter-spacing: 1px;
+  overflow-y: hidden;
 
   @media #{$media-desktop} {
     justify-content: flex-start;
+    min-height: 100vh;
   }
   &:before {
     content: '';
@@ -378,6 +381,9 @@ button {
     width: 30%;
     height: 100vh;
     background: #000;
+    @media #{$media-desktop} {
+      height: 100vh;
+    }
   }
   &__arrow {
     align-self: center;
