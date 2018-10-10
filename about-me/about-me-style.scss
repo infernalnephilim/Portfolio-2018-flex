@@ -1,5 +1,7 @@
 @import '../variables';
 
+$img-translation-value: 30px;
+
 .about-me-header {
   background: url("../img/about_me_photo.jpg") no-repeat 50% 0px;
   background-size: cover;
@@ -12,4 +14,98 @@
     }
   }
 
+}
+.hobby {
+  //display: flex;
+  &__item {
+    position: relative;
+    margin: 5px;
+    margin-bottom: 30px;
+    @media #{$media-desktop} {
+      margin-bottom: 150px;
+    }
+  }
+  &__img {
+    width: 80%;
+    margin-bottom: 0px;
+    z-index: 1;
+    &--left {
+      margin-right: 20%;
+    }
+    &--right {
+      margin-left: 20%;
+    }
+    @media screen and (max-width : 530px) {
+      width: 100%;
+      &--left {
+        margin-right: 0;
+      }
+      &--right {
+        margin-left: 0;
+      }
+    }
+  }
+  &__text {
+    display: inline-flex;
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+    bottom: 100px;
+    z-index: 5;
+    border: 4px solid $decoration-color-2;
+    @media #{$media-desktop} {
+      position: absolute;
+      //margin-top: -15%;
+      bottom: -5%;
+    }
+    &--left {
+      left: 0;
+      margin-left: $img-translation-value;
+      @media screen and (max-width : 530px) {
+        width: calc(100% - 30px);
+      }
+      .hobby__description {
+        @include translate(-$img-translation-value,$img-translation-value);
+      }
+
+    }
+    &--right {
+      margin-left: auto;
+      left: calc(100% - 530px);
+      margin-right: $img-translation-value;
+      @media #{$media-desktop} {
+        right: 0;
+      }
+      @media screen and (max-width : 530px) {
+        left: -$img-translation-value;
+        margin-left: $img-translation-value;
+        width: calc(100% - 30px);
+      }
+      .hobby__description {
+        @include translate($img-translation-value,$img-translation-value);
+      }
+    }
+    h4 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+    p {
+      text-align: justify;
+      line-height: 1.5em;
+    }
+  }
+  &__description {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background: $grey;
+    @media #{$media-desktop} {
+      padding: 50px;
+    }
+
+  }
+}
+
+.gallery{
+  background: $grey;
 }

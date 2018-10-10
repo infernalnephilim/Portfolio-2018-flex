@@ -130,6 +130,8 @@
               -ms-transform: translate(30px, -30px);
               -o-transform: translate(30px, -30px);
               transform: translate(30px, -30px); } }
+          .portfolio-wrapper .featured-projects .item__text .text .technologies {
+            font-size: .8em; }
         .portfolio-wrapper .featured-projects .item__text h5 {
           padding: 0;
           margin: 5px 0; }
@@ -247,43 +249,6 @@
         @media screen and (min-width: 1300px) {
           .other-projects .item__text p {
             margin: 20px 0; } }
-
-.subpage-main {
-  flex-direction: column;
-  padding: 20px 10px; }
-  @media screen and (min-width: 1300px) {
-    .subpage-main {
-      padding: 100px 10px; } }
-  .subpage-main img {
-    padding: 10px;
-    width: 100%;
-    margin-bottom: 50px; }
-  .subpage-main a {
-    margin: 5px; }
-  .subpage-main button {
-    min-width: 100px; }
-  .subpage-main .year {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    color: #c8c8c8;
-    font-weight: bold; }
-    @media screen and (min-width: 1300px) {
-      .subpage-main .year {
-        font-size: 3em; } }
-  .subpage-main__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center; }
-  .subpage-main__buttons {
-    margin: 40px 10px; }
-  .subpage-main__arrow {
-    font-size: 3em;
-    justify-self: flex-end;
-    padding: 20px 10px; }
-  .subpage-main .container {
-    flex-direction: column; }
 
 .design {
   background: #F6F6F6; }

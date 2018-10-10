@@ -494,6 +494,55 @@ button {
     }
   }
 }
+
+.subpage-main {
+  flex-direction: column;
+  padding: 20px $mobile-margin;
+  @media #{$media-desktop} {
+    padding: 100px $mobile-margin;
+  }
+  img {
+    padding: $mobile-margin;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  a {
+    margin: 5px;
+  }
+  button {
+    min-width: 100px;
+  }
+  .year {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #c8c8c8;
+    font-weight: bold;
+    @media #{$media-desktop} {
+      font-size: 3em;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+  &__buttons {
+    margin: 40px $mobile-margin;
+  }
+  &__arrow {
+    font-size: 3em;
+    //align-self: flex-end;
+    justify-self: flex-end;
+    padding: 20px $mobile-margin;
+  }
+  .container {
+    flex-direction: column;
+  }
+
+}
+
 .subpage-header {
   position: relative;
   min-height: 50vh;
@@ -509,6 +558,14 @@ button {
   }
   &--jinglex{
     background: url("../img/jinglex_featured3.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    background-attachment: fixed;
+  }
+  &--jinglex2017{
+    background: url("../img/jinglex_old_featured.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
@@ -541,6 +598,14 @@ button {
   }
   &--lista-zakupow{
     background: url("../img/lista-zakupow_featured.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    background-attachment: fixed;
+  }
+  &--preloader{
+    background: url("../img/preloader_featured.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;

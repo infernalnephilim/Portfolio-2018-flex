@@ -423,6 +423,43 @@ button {
       color: rgba(255, 255, 255, 0.2);
       text-align: right; }
 
+.subpage-main {
+  flex-direction: column;
+  padding: 20px 10px; }
+  @media screen and (min-width: 1300px) {
+    .subpage-main {
+      padding: 100px 10px; } }
+  .subpage-main img {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 50px; }
+  .subpage-main a {
+    margin: 5px; }
+  .subpage-main button {
+    min-width: 100px; }
+  .subpage-main .year {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #c8c8c8;
+    font-weight: bold; }
+    @media screen and (min-width: 1300px) {
+      .subpage-main .year {
+        font-size: 3em; } }
+  .subpage-main__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center; }
+  .subpage-main__buttons {
+    margin: 40px 10px; }
+  .subpage-main__arrow {
+    font-size: 3em;
+    justify-self: flex-end;
+    padding: 20px 10px; }
+  .subpage-main .container {
+    flex-direction: column; }
+
 .subpage-header {
   position: relative;
   min-height: 50vh;
@@ -437,6 +474,13 @@ button {
     background-attachment: fixed; }
   .subpage-header--jinglex {
     background: url("../img/jinglex_featured3.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    background-attachment: fixed; }
+  .subpage-header--jinglex2017 {
+    background: url("../img/jinglex_old_featured.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
@@ -465,6 +509,13 @@ button {
     background-attachment: fixed; }
   .subpage-header--lista-zakupow {
     background: url("../img/lista-zakupow_featured.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    background-attachment: fixed; }
+  .subpage-header--preloader {
+    background: url("../img/preloader_featured.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
