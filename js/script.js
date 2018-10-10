@@ -91,7 +91,7 @@ $(document).ready(function () {
                 continue;
             }
 
-            el.style.backgroundPosition = '50% ' + Math.round((elOffset - offset) * 3 / 8) + 'px';
+            el.style.backgroundPosition = '50% ' + Math.round((elOffset - offset) * 2 / 8) + 'px';
         }
         for (let i in imagesCover) {
             el = imagesCover[i];
