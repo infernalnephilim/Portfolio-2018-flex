@@ -304,8 +304,8 @@ button {
   min-height: 100vh;
   width: 100%;
   background: url("../img/apple-691282_1920.jpg");
-  -webkit-background-size: auto 110%;
-  background-size: auto 110%;
+  -webkit-background-size: auto 120%;
+  background-size: auto 120%;
   background-repeat: no-repeat;
   background-position: 50% 0px;
   background-attachment: fixed;
@@ -365,7 +365,7 @@ button {
     position: absolute;
     top: 50vh;
     width: 100%;
-    height: 51%;
+    height: 55%;
     z-index: 5; }
     .main-header__cover--1 {
       background: url("../img/header-cover2.png") no-repeat 50% -100%; }
