@@ -1,10 +1,11 @@
 @import '../variables';
 
 $img-translation-value: 30px;
+$box-shadow-color: #d8d8d8;
 
 .about-me-header {
   background: url("../img/about_me_photo.jpg") no-repeat 50% 0px;
-  background-size: cover;
+  @include subpage-header-bg;
 }
 
 .about-me-section {
@@ -12,9 +13,36 @@ $img-translation-value: 30px;
     button {
       margin: 5px;
     }
+    .about {
+      margin: $mobile-margin;
+      &__header {
+        border-bottom: 3px solid $decoration-color;
+        padding: 30px 20px;
+        width: auto;
+        font-weight: normal;
+      }
+      &__text {
+        padding: 30px;
+        background: $grey;
+        width: 90%;
+        margin-left: 10%;
+        margin-top: -3em;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        text-align: justify;
+        line-height: 1.5em;
+        &--subtitle {
+          display: block;
+          font-weight: bold;
+          font-size: 1.2em;
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 
 }
+
 .hobby {
   //display: flex;
   &__item {
@@ -35,7 +63,7 @@ $img-translation-value: 30px;
     &--right {
       margin-left: 20%;
     }
-    @media screen and (max-width : 530px) {
+    @media screen and (max-width: 530px) {
       width: 100%;
       &--left {
         margin-right: 0;
@@ -61,11 +89,12 @@ $img-translation-value: 30px;
     &--left {
       left: 0;
       margin-left: $img-translation-value;
-      @media screen and (max-width : 530px) {
+      @media screen and (max-width: 530px) {
         width: calc(100% - 30px);
       }
       .hobby__description {
-        @include translate(-$img-translation-value,$img-translation-value);
+        @include translate(-$img-translation-value, $img-translation-value);
+        //@include box-shadow(-1px, 1px, 1px, $box-shadow-color);
       }
 
     }
@@ -76,13 +105,14 @@ $img-translation-value: 30px;
       @media #{$media-desktop} {
         right: 0;
       }
-      @media screen and (max-width : 530px) {
+      @media screen and (max-width: 530px) {
         left: -$img-translation-value;
         margin-left: $img-translation-value;
         width: calc(100% - 30px);
       }
       .hobby__description {
-        @include translate($img-translation-value,$img-translation-value);
+        @include translate($img-translation-value, $img-translation-value);
+        //@include box-shadow(1px, 1px, 1px, $box-shadow-color);
       }
     }
     h4 {
@@ -106,6 +136,6 @@ $img-translation-value: 30px;
   }
 }
 
-.gallery{
+.gallery {
   background: $grey;
 }

@@ -7,12 +7,15 @@ module.exports = function (grunt) {
                 src: [
                     'js/gator.min.js',
                     'js/jquery-3.3.1.min.js',
+                    'js/jquery-ui.min.js',
+                    'js/jquery.transit.min.js',
                     'js/script.js',
-                    'portfolio/portfolio.js',
                     'portfolio/slider.js',
+                    'portfolio/portfolio.js',
                     'skills/skills.js',
+                    'js/validation.js',
                 ],
-                dest: 'dest/js/concat.js'
+                dest: 'js/concat.js'
             },
             css: {
                 src: [
@@ -26,18 +29,18 @@ module.exports = function (grunt) {
                     'skills/skills-style.css',
                     'what-can-i-do-for-you/what-can-i-do-for-you.css',
                 ],
-                dest: 'dest/css/concat.css'
+                dest: 'css/concat.css'
             }
         },
         cssmin: {
             css: {
-                src: 'dest/css/concat.css',
+                src: 'css/concat.css',
                 dest: 'dest/css/styles.min.css'
             }
         },
         uglify: {
             js: {
-                src: 'dest/js/concat.js',
+                src: 'js/concat.js',
                 dest: 'dest/js/scripts.min.js'
             }
         },
@@ -48,7 +51,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'dest/js/concat.js': 'dest/js/concat.js'
+                    'js/concat.js': 'js/concat.js'
                 }
             }
         }

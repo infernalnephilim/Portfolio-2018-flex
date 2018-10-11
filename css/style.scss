@@ -353,9 +353,11 @@ button {
     //background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
 }
-.header{
+
+.header {
   width: 100%;
 }
+
 .main-header {
   position: relative;
   min-height: 100vh;
@@ -419,17 +421,17 @@ button {
       animation-delay: .3s;
     }
   }
-  &__cover{
+  &__cover {
     position: absolute;
     top: 50vh;
     width: 100%;
     height: 55%;
     z-index: 5;
     margin-bottom: -1px;
-    &--1{
+    &--1 {
       background: url("../img/header-cover2.png") no-repeat 50% -100%;
     }
-    &--2{
+    &--2 {
       background: url("../img/header-cover.png") no-repeat 50% calc(-100% - 50px);
     }
   }
@@ -557,69 +559,37 @@ button {
   min-height: 50vh;
   width: 100%;
   letter-spacing: 1px;
-  &--dermina{
+  &--dermina {
     background: url("../img/dermina_featured3.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0px;
-    background-attachment: fixed;
+    @include subpage-header-bg;
   }
-  &--jinglex{
+  &--jinglex {
     background: url("../img/jinglex_featured3.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0px;
-    background-attachment: fixed;
+    @include subpage-header-bg;
   }
-  &--jinglex2017{
+  &--jinglex2017 {
     background: url("../img/jinglex_old_featured.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0px;
-    background-attachment: fixed;
+    @include subpage-header-bg;
   }
-  &--pixijs{
+  &--pixijs {
     background: url("../img/pixijs_featured3.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0px;
-    background-attachment: fixed;
+    @include subpage-header-bg;
   }
-  &--portfolio-bootstrap{
+  &--portfolio-bootstrap {
     background: url("../img/portfolio_featured.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0px;
-    background-attachment: fixed;
+    @include subpage-header-bg;
   }
-  &--portfolio-flex{
+  &--portfolio-flex {
     background: url("../img/portfolio_nowe_featured.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0px;
-    background-attachment: fixed;
+    @include subpage-header-bg;
   }
-  &--lista-zakupow{
+  &--lista-zakupow {
     background: url("../img/lista-zakupow_featured.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0px;
-    background-attachment: fixed;
+    @include subpage-header-bg;
   }
-  &--preloader{
+  &--preloader {
     background: url("../img/preloader_featured.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0px;
-    background-attachment: fixed;
+    @include subpage-header-bg;
   }
   @media #{$media-desktop} {
     justify-content: flex-start;
@@ -679,11 +649,11 @@ button {
       opacity: 1;
       animation: 2s ease-out 0s 1 fadeInFromTop;
       @media #{$media-desktop} {
-          font-size: 7em;
+        font-size: 7em;
       }
     }
-    .subpage-title{
-      &--pixijs{
+    .subpage-title {
+      &--pixijs {
         @media #{$media-desktop} {
           font-size: 5em;
         }
@@ -738,7 +708,6 @@ button {
   }
 }
 
-
 @keyframes move-arrow-2 {
   0% {
     @include translateAndRotate(0, 0);
@@ -788,6 +757,7 @@ button {
     clip-path: polygon(0px calc(100% - 60px), 60px calc(100% - 60px), 60px 100%, 0px 100%);
   }
 }
+
 .skills-section {
   background: $grey;
 }

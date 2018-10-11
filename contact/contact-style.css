@@ -101,6 +101,7 @@
       .contact-section .content__form .form-submit {
         text-align: right; }
     .contact-section .content .form-row {
+      position: relative;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -142,5 +143,47 @@
         height: 2px;
         background-color: #F1C40F;
         transition: 0.4s; }
+
+.not-correct {
+  outline: 2px solid #c31432 !important; }
+
+.not-correct:focus {
+  outline: 3px solid #c31432 !important; }
+
+.invalid-tooltip {
+  display: none;
+  position: absolute;
+  top: 100%;
+  z-index: 3;
+  max-width: 100%;
+  padding: .5rem;
+  margin-top: .1rem;
+  font-size: .875rem;
+  line-height: 1;
+  color: #fff;
+  background-color: #c31432;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-left: -2px; }
+
+.message-success, .message-fail {
+  display: none;
+  position: relative;
+  border-radius: 2px;
+  top: 20px;
+  margin: auto;
+  width: 85%;
+  height: 4em;
+  line-height: 4em;
+  text-align: center; }
+
+.message-success {
+  border: 2px solid #C0E36F;
+  border-left: solid 8px #C0E36F; }
+
+.message-fail {
+  border: 2px solid #c31432;
+  border-left: solid 8px #c31432; }
 
 /*# sourceMappingURL=contact-style.css.map */

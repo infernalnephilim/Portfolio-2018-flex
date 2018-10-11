@@ -78,6 +78,23 @@ $media-desktop: "screen and (min-width : 1300px)";
   transform: rotate($deg);
 }
 
+@mixin box-shadow($hoff, $voff, $blur, $color){
+  -webkit-box-shadow:  $hoff $voff $blur $color;
+  -moz-box-shadow:  $hoff $voff $blur $color;
+  box-shadow:  $hoff $voff $blur $color;
+}
+
+@mixin subpage-header-bg{
+  -webkit-background-size: auto 60%;
+  background-size: auto 130%;
+  background-repeat: no-repeat;
+  background-position: 50% 0px;
+  background-attachment: fixed;
+  @media #{$media-desktop} {
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+}
 
 
 @keyframes fadeIn {

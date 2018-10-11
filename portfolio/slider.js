@@ -1,6 +1,7 @@
 class ImageSlider {
     constructor(el, prev, next, options) {
-        this.default = {type: "slide"};
+        const defaultOptions = {type: "slide"};
+        this.options = Object.assign({}, defaultOptions, options);
         this.sliderSelector = el;
         this.slider = null;
         this.slides = null;
@@ -22,7 +23,7 @@ class ImageSlider {
         this.lastSlide = this.slidesLength - 1;
         console.log(this.slides);
 
-        if (this.default.type === "cube") {
+        if (this.options.type === "cube") {
             this.rotateAngle = 360 / this.slidesLength;
             if (this.currentSlide === 0) {
                 $(this.prev).addClass("disabled-ctrl");
@@ -39,7 +40,7 @@ class ImageSlider {
             }
         }
 
-        if (this.default.type === "slide") {
+        if (this.options.type === "slide") {
             if (this.currentSlide === 0) {
                 $(this.prev).addClass("disabled-ctrl");
             }
@@ -57,25 +58,20 @@ class ImageSlider {
 
 
         $(this.prev).on("click", () => {
-            console.log("klik prev");
             this.slidePrev()
         });
         $(this.next).on("click", () => {
-                console.log("klik next");
                 this.slideNext()
             }
         );
-        // this.slider.addEventListener("swap", function (event) {
-        //     alert('Swaped ' + event.detail.direction + ' at ' + event.target.id);
-        // }, false);
     }
 
     slidePrev() {
-        if (this.default.type === "cube") {
+        if (this.options.type === "cube") {
             this.currentAngle = this.currentAngle - this.rotateAngle;
             this.changeSlide();
         }
-        if (this.default.type === "slide") {
+        if (this.options.type === "slide") {
             if (this.currentSlide > 0) {
                 this.currentSlide -= 1;
                 this.changeSlide();
@@ -86,11 +82,11 @@ class ImageSlider {
     }
 
     slideNext() {
-        if (this.default.type === "cube") {
+        if (this.options.type === "cube") {
             this.currentAngle = this.currentAngle + this.rotateAngle;
             this.changeSlide();
         }
-        if (this.default.type === "slide") {
+        if (this.options.type === "slide") {
             if (this.currentSlide < this.lastSlide) {
                 this.currentSlide += 1;
                 console.log(this.currentSlide);
@@ -100,7 +96,7 @@ class ImageSlider {
     }
 
     changeSlide() {
-        if (this.default.type === "cube") {
+        if (this.options.type === "cube") {
             this.slider.css({
                 "-webkit-transform": "rotateY(" + this.currentAngle + "deg)",
                 "-moz-transform": "rotateY(" + this.currentAngle + "deg)",
@@ -108,10 +104,10 @@ class ImageSlider {
                 "transform": "rotateY(" + this.currentAngle + "deg)"
             });
         }
-        if (this.default.type === "slide") {
-            if (this.currentSlide == 0) {
+        if (this.options.type === "slide") {
+            if (this.currentSlide === 0) {
                 $(this.prev).addClass("disabled-ctrl");
-            } else if (this.currentSlide == this.lastSlide) {
+            } else if (this.currentSlide === this.lastSlide) {
                 $(this.next).addClass("disabled-ctrl");
             } else {
                 if ($(this.prev).hasClass("disabled-ctrl")) {
@@ -122,7 +118,6 @@ class ImageSlider {
                 }
 
             }
-            console.log("SLIDE");
             this.slider.css({
                 "-webkit-transform": "translate(" + -this.currentSlide * 100 + "%, 0);",
                 "-moz-transform": "translate(" + -this.currentSlide * 100 + "%, 0);",

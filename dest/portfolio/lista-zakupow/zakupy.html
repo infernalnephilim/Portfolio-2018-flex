@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleksandra Półtorak - Programista & Grafik & Webmaster</title>
+    <meta name="Title" content="Aleksandra Półtorak, Programista, Grafik, Webmaster, Kraków">
+    <meta name="Description"
+          content="Aleksandra Półtorak - Programista & Grafik & Webmaster, Kraków E-Mail: aleksandra.poltorak.x@gmail.com">
+    <meta name="Keywords"
+          content="Aleksandra Półtorak, Programista, Grafik, Webmaster, Kraków, Studentka, Uniwersytet Jagielloński, UJ, Informatyk, Informatyka, portfolio, Programowanie, C++, C#, Python, Web, HTML, CSS, JavaScript, js, PHP, Bootstrap, Unity, Unreal Engine, Adobe, Photoshop, Illustrator, GIMP">
+    <meta name=”robots” content=”noodp”>
+    <meta name="robots" content="noydir"/>
+    <meta name="author" content="Aleksandra Półtorak">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#4b0099">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#4b0099">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#000000">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Montserrat|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Allura|Parisienne" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aclonica|Annie+Use+Your+Telescope|Arizonia|Baumans|Bilbo+Swash+Caps|Dawning+of+a+New+Day|Give+You+Glory|Gugi|Katibeh|Kristi|Loved+by+the+King|Megrim|Montez|Mr+De+Haviland|Norican|Oleo+Script+Swash+Caps|Oregano|Qwigley|Raleway+Dots|Rouge+Script|Sofia|Sue+Ellen+Francisco|Wire+One"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<div class="shopping-list-wrapper">
+    <div ng-app="myApp" name="myShoppingList" ng-controller="myCtrl" class="container shopping-list">
+        <div class="row list-title">
+            <div class="col-12">
+                <h2 class="text-uppercase text-center">{{appTitle}}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-1 col-sm-0"></div>
+            <div class="col-lg-6 col-md-10 col-sm-12">
+                <ul class="sh-list">
+                    <li ng-repeat="x in products">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                {{x.name}}
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12 text-right">
+                                <button class="btn" ng-click="decreaseAmount($index)">-</button>
+                                <input class="am-style" type="number" ng-model="x.amount" value="{{x.amount}}"
+                                       min="1">
+                                <button class="btn" ng-click="increaseAmount($index)">+</button>
+                                <button class="btn btn-danger remove-item text-right" ng-click="removeItem($index)">
+                                    &times;
+                                </button>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+
+                <form class="add-form row">
+                    <div class="col-8">
+                        <label>Produkt</label>
+                        <input class="input-light form-control" type="text" placeholder="Wpisz nazwę produktu"
+                               ng-model="addMe">
+                    </div>
+                    <div class="col-4">
+                        <label>Ilość</label>
+                        <input class="input-light form-control" type="number" min="1" ng-value="1" ng-model="addAm">
+                    </div>
+                    <div class="col-12">
+                        <button class="btn" type="submit" name="Dodaj" ng-click="addProduct()">Dodaj</button>
+                        <p id="error-text" class="alert-danger">{{errorText}}</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="angular.min.js"></script>
+<script src="app.js"></script>
+<script src="ctrl.js"></script>
+</body>
+</html>

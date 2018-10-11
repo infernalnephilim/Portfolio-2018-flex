@@ -1,60 +1,61 @@
 <div class="content">
-        <div class="content__details">
-            <h3 class="">Dane kontaktowe</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Kraków, Polska</p>
-            <p><i class="fas fa-mobile-alt"></i> +48 694 962 442</p>
-            <p><i class="far fa-envelope"></i> aleksandra.poltorak.x@gmail.com
-            </p>
+    <div class="content__details">
+        <h3 class="">Dane kontaktowe</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Kraków, Polska</p>
+        <p><i class="fas fa-mobile-alt"></i> +48 694 962 442</p>
+        <p><i class="far fa-envelope"></i> aleksandra.poltorak.x@gmail.com
+        </p>
 
-        </div>
-        <div class="content__form">
-            <h3 class="">Wyślij wiadomość</h3>
-            <form id="contact-form" class="needs-validation">
-                <div class="form-row">
-                    <div class="form-row__name">
-                        <input type="text" class="form-control" id="contact-name" placeholder="" required>
-                        <span class="focus-border"></span>
+    </div>
+    <div class="content__form">
+        <h3 class="">Wyślij wiadomość</h3>
+        <form id="contact-form" class="needs-validation">
+            <div class="form-row">
+                <div class="form-row__name">
+                    <input type="text" class="form-control" id="contact-name" placeholder="" required>
+                    <span class="focus-border"></span>
 
-                        <label for="contact-name" class="input_label">
-                            <span class="input_label_content"> Imię i nazwisko</span>
-                        </label>
-                        <!--<div id="name-valid" class="invalid-tooltip">-->
-                            <!--Wpisz poprawne imię i nazwisko-->
-                        <!--</div>-->
-                    </div>
-                    <div class="form-row__email">
-
-                        <input type="text" class="form-control" id="contact-mail" placeholder=""
-                               aria-describedby="validationTooltipUsernamePrepend" required>
-                        <span class="focus-border"></span>
-
-                        <label for="contact-mail" class="input_label">
-                            <span class="input_label__content">Twój E-Mail</span>
-                        </label>
-                        <!--<div id="topic-valid" class="invalid-tooltip">-->
-                            <!--Podany adres E-Mail jest niepoprawny-->
-                        <!--</div>-->
-
+                    <label for="contact-name" class="input_label">
+                        <span class="input_label_content"> Imię i nazwisko</span>
+                    </label>
+                    <div id="name-valid" class="invalid-tooltip">
+                        Wpisz poprawne imię i nazwisko
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-row__message">
-                        <textarea class="form-control" id="contact-text" rows="4" required></textarea>
-                        <span class="focus-border"></span>
+                <div class="form-row__email">
 
-                        <label for="contact-text" class="input_label">
-                            <span class="input_label_content">Twoja wiadomość</span>
-                        </label>
-                        <!--<div id="text-valid" class="invalid-tooltip">-->
-                            <!--Wpisz treść wiadomości-->
-                        <!--</div>-->
+                    <input type="text" class="form-control" id="contact-mail" placeholder=""
+                           aria-describedby="validationTooltipUsernamePrepend" required>
+                    <span class="focus-border"></span>
+
+                    <label for="contact-mail" class="input_label">
+                        <span class="input_label__content">Twój E-Mail</span>
+                    </label>
+                    <div id="topic-valid" class="invalid-tooltip">
+                        Podany adres E-Mail jest niepoprawny
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-row__message">
+                    <textarea class="form-control" id="contact-text" rows="4" required></textarea>
+                    <span class="focus-border"></span>
+
+                    <label for="contact-text" class="input_label">
+                        <span class="input_label_content">Twoja wiadomość</span>
+                    </label>
+                    <div id="text-valid" class="invalid-tooltip">
+                        Wpisz treść wiadomości
                     </div>
                 </div>
-                <div class="form-submit">
-                    <button id="submit" type="button">Wyślij wiadomość</button>
-                </div>
-            </form>
-            <!--<div id="message-sent" class="message-success alert-success">Message</div>-->
-            <!--<div id="message-sent-failed" class="message-fail alert-danger">Message</div>-->
-        </div>
+            </div>
+            <div class="form-submit">
+                <button id="submit" type="button">Wyślij wiadomość</button>
+            </div>
+        </form>
+        <div id="message-sent" class="message-success">Message</div>
+        <div id="message-sent-failed" class="message-fail">Message</div>
+    </div>
 </div>
+<script src="js/validation.js"></script>

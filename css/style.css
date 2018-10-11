@@ -476,60 +476,92 @@ button {
   letter-spacing: 1px; }
   .subpage-header--dermina {
     background: url("../img/dermina_featured3.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: auto 60%;
+    background-size: auto 130%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }
+    @media screen and (min-width: 1300px) {
+      .subpage-header--dermina {
+        -webkit-background-size: cover;
+        background-size: cover; } }
   .subpage-header--jinglex {
     background: url("../img/jinglex_featured3.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: auto 60%;
+    background-size: auto 130%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }
+    @media screen and (min-width: 1300px) {
+      .subpage-header--jinglex {
+        -webkit-background-size: cover;
+        background-size: cover; } }
   .subpage-header--jinglex2017 {
     background: url("../img/jinglex_old_featured.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: auto 60%;
+    background-size: auto 130%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }
+    @media screen and (min-width: 1300px) {
+      .subpage-header--jinglex2017 {
+        -webkit-background-size: cover;
+        background-size: cover; } }
   .subpage-header--pixijs {
     background: url("../img/pixijs_featured3.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: auto 60%;
+    background-size: auto 130%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }
+    @media screen and (min-width: 1300px) {
+      .subpage-header--pixijs {
+        -webkit-background-size: cover;
+        background-size: cover; } }
   .subpage-header--portfolio-bootstrap {
     background: url("../img/portfolio_featured.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: auto 60%;
+    background-size: auto 130%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }
+    @media screen and (min-width: 1300px) {
+      .subpage-header--portfolio-bootstrap {
+        -webkit-background-size: cover;
+        background-size: cover; } }
   .subpage-header--portfolio-flex {
     background: url("../img/portfolio_nowe_featured.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: auto 60%;
+    background-size: auto 130%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }
+    @media screen and (min-width: 1300px) {
+      .subpage-header--portfolio-flex {
+        -webkit-background-size: cover;
+        background-size: cover; } }
   .subpage-header--lista-zakupow {
     background: url("../img/lista-zakupow_featured.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: auto 60%;
+    background-size: auto 130%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }
+    @media screen and (min-width: 1300px) {
+      .subpage-header--lista-zakupow {
+        -webkit-background-size: cover;
+        background-size: cover; } }
   .subpage-header--preloader {
     background: url("../img/preloader_featured.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: auto 60%;
+    background-size: auto 130%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }
+    @media screen and (min-width: 1300px) {
+      .subpage-header--preloader {
+        -webkit-background-size: cover;
+        background-size: cover; } }
   @media screen and (min-width: 1300px) {
     .subpage-header {
       justify-content: flex-start; } }
