@@ -56,7 +56,7 @@ img {
   max-width: 100%; }
 
 h1, h3 {
-  font-family: 'Poiret One', cursive;
+  font-family: "Poiret One", cursive;
   font-weight: lighter; }
 
 h3 {
@@ -120,8 +120,11 @@ button {
 .section-header {
   width: 100%;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 50px; }
+  @media screen and (min-width: 1300px) {
+    .section-header {
+      margin-top: 100px; } }
 
 .btn-dark {
   border-color: #000000;
@@ -477,7 +480,7 @@ button {
   .subpage-header--dermina {
     background: url("../img/dermina_featured3.jpg");
     -webkit-background-size: auto 60%;
-    background-size: auto 130%;
+    background-size: auto 120%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }
@@ -488,7 +491,7 @@ button {
   .subpage-header--jinglex {
     background: url("../img/jinglex_featured3.jpg");
     -webkit-background-size: auto 60%;
-    background-size: auto 130%;
+    background-size: auto 120%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }
@@ -499,7 +502,7 @@ button {
   .subpage-header--jinglex2017 {
     background: url("../img/jinglex_old_featured.jpg");
     -webkit-background-size: auto 60%;
-    background-size: auto 130%;
+    background-size: auto 120%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }
@@ -510,7 +513,7 @@ button {
   .subpage-header--pixijs {
     background: url("../img/pixijs_featured3.jpg");
     -webkit-background-size: auto 60%;
-    background-size: auto 130%;
+    background-size: auto 120%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }
@@ -521,7 +524,7 @@ button {
   .subpage-header--portfolio-bootstrap {
     background: url("../img/portfolio_featured.jpg");
     -webkit-background-size: auto 60%;
-    background-size: auto 130%;
+    background-size: auto 120%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }
@@ -532,7 +535,7 @@ button {
   .subpage-header--portfolio-flex {
     background: url("../img/portfolio_nowe_featured.jpg");
     -webkit-background-size: auto 60%;
-    background-size: auto 130%;
+    background-size: auto 120%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }
@@ -543,7 +546,7 @@ button {
   .subpage-header--lista-zakupow {
     background: url("../img/lista-zakupow_featured.jpg");
     -webkit-background-size: auto 60%;
-    background-size: auto 130%;
+    background-size: auto 120%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }
@@ -554,7 +557,7 @@ button {
   .subpage-header--preloader {
     background: url("../img/preloader_featured.jpg");
     -webkit-background-size: auto 60%;
-    background-size: auto 130%;
+    background-size: auto 120%;
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-attachment: fixed; }

@@ -4,8 +4,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-  //border: 1px solid red;
+  font-family: $default-font-family;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -32,18 +31,6 @@ section {
   @media #{$media-desktop} {
     padding: 150px 0px;
   }
-  &:after {
-    //display: block;
-    //content: '';
-    //background: $decoration-color;
-    //height: 20px;
-    //width: 100%;
-    //-webkit-transform: rotate(1deg);
-    //-moz-transform: rotate(1deg);
-    //-ms-transform: rotate(1deg);
-    //-o-transform: rotate(1deg);
-    //transform: rotate(1deg);
-  }
 }
 
 a {
@@ -60,22 +47,7 @@ img {
 }
 
 h1, h3 {
-  //font-family: "Parisienne", sans-serif;
-
-  //font-family: 'Kanit', sans-serif;
-  //font-family: 'Kodchasan', sans-serif;
-  //font-family: 'Srisakdi', cursive;
-  //font-family: 'Anton', sans-serif;
-
-  //font-family: 'Megrim', cursive; //fajne
-  //font-family: 'Kodchasan', sans-serif;
-  //font-family: 'Srisakdi', cursive;
-  //font-family: 'Anton', sans-serif;
-  //font-family: 'Kanit', sans-serif;
-  //font-family: 'Fahkwang', sans-serif;
-
-  font-family: 'Poiret One', cursive;
-  //font-family: 'Tangerine', cursive;
+  font-family: $headers-font-family;
   font-weight: lighter;
 }
 
@@ -147,8 +119,11 @@ button {
 .section-header {
   width: 100%;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 50px;
+  @media #{$media-desktop} {
+    margin-top: 100px;
+  }
 }
 
 .btn-dark {
@@ -263,9 +238,6 @@ button {
 
   .navbar-brand span {
     font-family: 'Megrim', cursive;
-    //font-family: 'Wire One', sans-serif;
-    //font-family: "Parisienne", sans-serif;
-
     letter-spacing: 2px;
   }
 

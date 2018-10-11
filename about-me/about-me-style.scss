@@ -4,7 +4,7 @@ $img-translation-value: 30px;
 $box-shadow-color: #d8d8d8;
 
 .about-me-header {
-  background: url("../img/about_me_photo.jpg") no-repeat 50% 0px;
+  background: url("../img/about_me_photo_subpage.jpg") no-repeat 50% 0px;
   @include subpage-header-bg;
 }
 
@@ -40,7 +40,6 @@ $box-shadow-color: #d8d8d8;
       }
     }
   }
-
 }
 
 .hobby {
@@ -132,10 +131,12 @@ $box-shadow-color: #d8d8d8;
     @media #{$media-desktop} {
       padding: 50px;
     }
-
   }
 }
 
 .gallery {
   background: $grey;
+  &__content {
+    margin: $mobile-margin;
+  }
 }

@@ -169,13 +169,11 @@
 
 .message-success, .message-fail {
   display: none;
-  position: relative;
-  border-radius: 2px;
-  top: 20px;
   margin: auto;
+  margin-top: 20px;
+  padding: 10px;
   width: 85%;
-  height: 4em;
-  line-height: 4em;
+  line-height: 2em;
   text-align: center; }
 
 .message-success {
