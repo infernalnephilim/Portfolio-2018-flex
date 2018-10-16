@@ -24,7 +24,7 @@
       -webkit-background-size: cover;
       background-size: cover; } }
 
-.about-me-section--subpage button {
+.about-me-section--subpage .button {
   margin: 5px; }
 .about-me-section--subpage .about {
   margin: 10px; }

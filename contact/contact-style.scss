@@ -15,7 +15,7 @@ $grey: #F6F6F6;
 }
 
 @mixin form-input-focus {
-  outline: none;
+  outline-color: transparent;
   ~ .focus-border {
     width: 100%;
     transition: 0.4s;
@@ -171,7 +171,7 @@ $grey: #F6F6F6;
 }
 
 .not-correct:focus {
-  outline: 3px solid $decoration-color !important;
+  //outline: 2px solid $decoration-color !important;
 }
 .invalid-tooltip{
   display: none;
@@ -179,8 +179,8 @@ $grey: #F6F6F6;
   top: 100%;
   z-index: 3;
   max-width: 100%;
-  padding: .5rem;
-  margin-top: .1rem;
+  padding: .6rem;
+  margin-top: 0px;
   font-size: .875rem;
   line-height: 1;
   color: #fff;
@@ -189,6 +189,9 @@ $grey: #F6F6F6;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   margin-left: -2px;
+  &--text{
+    margin-top: -2px;
+  }
 }
 
 .message-success, .message-fail {

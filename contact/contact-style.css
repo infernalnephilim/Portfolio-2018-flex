@@ -56,7 +56,7 @@
         color: white;
         border: none; }
         .contact-section .content__form input:focus {
-          outline: none; }
+          outline-color: transparent; }
           .contact-section .content__form input:focus ~ .focus-border {
             width: 100%;
             transition: 0.4s; }
@@ -82,7 +82,7 @@
         resize: vertical;
         min-height: 200px; }
         .contact-section .content__form textarea:focus {
-          outline: none; }
+          outline-color: transparent; }
           .contact-section .content__form textarea:focus ~ .focus-border {
             width: 100%;
             transition: 0.4s; }
@@ -147,17 +147,14 @@
 .not-correct {
   outline: 2px solid #c31432 !important; }
 
-.not-correct:focus {
-  outline: 3px solid #c31432 !important; }
-
 .invalid-tooltip {
   display: none;
   position: absolute;
   top: 100%;
   z-index: 3;
   max-width: 100%;
-  padding: .5rem;
-  margin-top: .1rem;
+  padding: .6rem;
+  margin-top: 0px;
   font-size: .875rem;
   line-height: 1;
   color: #fff;
@@ -166,6 +163,8 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   margin-left: -2px; }
+  .invalid-tooltip--text {
+    margin-top: -2px; }
 
 .message-success, .message-fail {
   display: none;

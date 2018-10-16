@@ -144,10 +144,10 @@
           @media screen and (min-width: 1300px) {
             .portfolio-wrapper .featured-projects .item__text p {
               margin: 20px 0; } }
-        .portfolio-wrapper .featured-projects .item__text button {
+        .portfolio-wrapper .featured-projects .item__text .button {
           margin-top: 10px; }
           @media screen and (min-width: 1300px) {
-            .portfolio-wrapper .featured-projects .item__text button {
+            .portfolio-wrapper .featured-projects .item__text .button {
               margin-top: 20px; } }
 
 .other-projects {

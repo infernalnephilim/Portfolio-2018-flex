@@ -76,7 +76,8 @@ h2 {
   }
 }
 
-button {
+.button {
+  display: inline-block;
   color: $white;
   background: transparent;
   border: 2px solid $white;
@@ -126,7 +127,7 @@ button {
   }
 }
 
-.btn-dark {
+.button-dark {
   border-color: #000000;
   color: #000;
 }
@@ -200,11 +201,11 @@ button {
 }
 
 .nav-active {
-  //display: flex;
+  display: flex;
 }
 
 .nav-inactive {
-  //display: none;
+  display: none;
 }
 
 .navbar {
@@ -459,12 +460,12 @@ button {
       width: auto;
       p {
         float: right;
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: .15em solid $decoration-color-2; /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        overflow: hidden;
+        border-right: .15em solid $decoration-color-2;
+        white-space: nowrap;
+        margin: 0 auto;
         margin-top: 10px;
-        letter-spacing: .15em; /* Adjust as needed */
+        letter-spacing: .15em;
         animation: typing 6.5s steps(60, end),
         blink-caret .75s step-end infinite;
       }
@@ -492,7 +493,7 @@ button {
   a {
     margin: 5px;
   }
-  button {
+  .button {
     min-width: 100px;
   }
   .year {

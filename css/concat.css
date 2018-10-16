@@ -86,7 +86,8 @@ h2 {
       left: 50px;
       top: 20px; } }
 
-button {
+.button {
+  display: inline-block;
   color: #ffffff;
   background: transparent;
   border: 2px solid #ffffff;
@@ -96,12 +97,12 @@ button {
   -ms-transition: all ease 0.4s;
   -o-transition: all ease 0.4s;
   transition: all ease 0.4s; }
-  button:hover {
+  .button:hover {
     border: 2px solid #c31432;
     cursor: pointer; }
-  button:focus {
+  .button:focus {
     outline: none; }
-  button:active {
+  .button:active {
     background: #c31432; }
 
 .container {
@@ -130,7 +131,7 @@ button {
     .section-header {
       margin-top: 100px; } }
 
-.btn-dark {
+.button-dark {
   border-color: #000000;
   color: #000; }
 
@@ -195,6 +196,12 @@ button {
   -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg); }
+
+.nav-active {
+  display: flex; }
+
+.nav-inactive {
+  display: none; }
 
 .navbar {
   display: flex;
@@ -423,16 +430,11 @@ button {
       .main-header__title .typewriter p {
         float: right;
         overflow: hidden;
-        /* Ensures the content is not revealed until the animation */
         border-right: 0.15em solid #F1C40F;
-        /* The typwriter cursor */
         white-space: nowrap;
-        /* Keeps the content on a single line */
         margin: 0 auto;
-        /* Gives that scrolling effect as the typing happens */
         margin-top: 10px;
         letter-spacing: .15em;
-        /* Adjust as needed */
         animation: typing 6.5s steps(60, end), blink-caret 0.75s step-end infinite; }
     .main-header__title p {
       width: auto;
@@ -451,7 +453,7 @@ button {
     margin-bottom: 50px; }
   .subpage-main a {
     margin: 5px; }
-  .subpage-main button {
+  .subpage-main .button {
     min-width: 100px; }
   .subpage-main .year {
     margin-top: 0;
@@ -803,7 +805,7 @@ footer {
       -webkit-background-size: cover;
       background-size: cover; } }
 
-.about-me-section--subpage button {
+.about-me-section--subpage .button {
   margin: 5px; }
 .about-me-section--subpage .about {
   margin: 10px; }
@@ -972,7 +974,7 @@ footer {
         color: white;
         border: none; }
         .contact-section .content__form input:focus {
-          outline: none; }
+          outline-color: transparent; }
           .contact-section .content__form input:focus ~ .focus-border {
             width: 100%;
             transition: 0.4s; }
@@ -998,7 +1000,7 @@ footer {
         resize: vertical;
         min-height: 200px; }
         .contact-section .content__form textarea:focus {
-          outline: none; }
+          outline-color: transparent; }
           .contact-section .content__form textarea:focus ~ .focus-border {
             width: 100%;
             transition: 0.4s; }
@@ -1063,17 +1065,14 @@ footer {
 .not-correct {
   outline: 2px solid #c31432 !important; }
 
-.not-correct:focus {
-  outline: 3px solid #c31432 !important; }
-
 .invalid-tooltip {
   display: none;
   position: absolute;
   top: 100%;
   z-index: 3;
   max-width: 100%;
-  padding: .5rem;
-  margin-top: .1rem;
+  padding: .6rem;
+  margin-top: 0px;
   font-size: .875rem;
   line-height: 1;
   color: #fff;
@@ -1082,6 +1081,8 @@ footer {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   margin-left: -2px; }
+  .invalid-tooltip--text {
+    margin-top: -2px; }
 
 .message-success, .message-fail {
   display: none;
@@ -1248,10 +1249,10 @@ footer {
           @media screen and (min-width: 1300px) {
             .portfolio-wrapper .featured-projects .item__text p {
               margin: 20px 0; } }
-        .portfolio-wrapper .featured-projects .item__text button {
+        .portfolio-wrapper .featured-projects .item__text .button {
           margin-top: 10px; }
           @media screen and (min-width: 1300px) {
-            .portfolio-wrapper .featured-projects .item__text button {
+            .portfolio-wrapper .featured-projects .item__text .button {
               margin-top: 20px; } }
 
 .other-projects {
